@@ -19,7 +19,7 @@
   <meta name="description" content="前端,计算机,程序员">
   <meta name="author" content="PengYiDuo">
   <meta name="keywords" content="前端,计算机,程序员">
-  <title>我的第一篇博客 - Peng的个人博客</title>
+  <title>hexo建站记录 - Peng的个人博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -164,18 +164,23 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="我的第一篇博客">
+            <span class="h2" id="subtitle" title="hexo建站记录">
               
             </span>
 
             
               <div class="mt-3">
   
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      PengYiDuo
+    </span>
+  
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-01-11 17:04" pubdate>
-        2021年1月11日 下午
+      <time datetime="2021-01-11 22:03" pubdate>
+        2021年1月11日 晚上
       </time>
     </span>
   
@@ -186,7 +191,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      42 字
+      1.5k 字
     </span>
   
 
@@ -196,12 +201,20 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      17
        分钟
     </span>
   
 
   
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
   
 </div>
 
@@ -226,12 +239,70 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">我的第一篇博客</h1>
+            <h1 style="display: none">hexo建站记录</h1>
             
             <div class="markdown-body">
-              <hr>
-<h1 id="这是我的第一篇博客"><a href="#这是我的第一篇博客" class="headerlink" title="这是我的第一篇博客"></a>这是我的第一篇博客</h1><p>我在2021-1-11日下午了这个小博客<br>我将在这个博客中记录了我人生的点点滴滴</p>
+              <p>前言:拥有自己的博客网站，是很多程序猿萌新梦寐以求的事儿，我也一样</p>
+<p>现在的博客网站分两种，静态博客和动态博客</p>
+<p>由于自己现在只懂前端知识，后端也就能写个接口的水平</p>
+<p>故选择静态博客，等以后自己再撸一个动态博客，当然也是后话了，开整！！</p>
 <hr>
+<h1 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h1><p>Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。大家可以进入hexo官网进行详细查看，因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。</p>
+<p>教程分三个部分</p>
+<ul>
+<li>第一部分：hexo的初级搭建还有部署到github page上，以及个人域名的绑定。</li>
+<li>第二部分：hexo的基本配置，更换主题，实现多终端工作，以及在coding page部署实现国内外分流</li>
+<li>第三部分：hexo添加各种功能，包括搜索的SEO，阅读量统计，访问量统计和评论系统等。</li>
+</ul>
+<h1 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h1><p>hexo的初级搭建还有部署到github page上，以及个人域名的绑定。</p>
+<h2 id="Hexo搭建步骤"><a href="#Hexo搭建步骤" class="headerlink" title="Hexo搭建步骤"></a>Hexo搭建步骤</h2><ol>
+<li>安装Git</li>
+<li>安装Node.js</li>
+<li>安装Hexo</li>
+<li>GitHub创建个人仓库</li>
+<li>生成SSH添加到GitHub</li>
+<li>将hexo部署到GitHub</li>
+<li>设置个人域名</li>
+<li>发布文章</li>
+</ol>
+<h3 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1. 安装Git"></a>1. 安装Git</h3><p>Git是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。也就是用来管理你的hexo博客文章，上传到GitHub的工具。Git非常强大，我觉得建议每个人都去了解一下。廖雪峰老师的Git教程写的非常好，大家可以了解一下。<a href="https://link.zhihu.com/?target=https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git教程</a></p>
+<p>windows：到git官网上下载,Download git,下载后会有一个Git Bash的命令行工具，以后就用这个工具来使用git。</p>
+<p>安装好后，用git –version 来查看一下版本</p>
+<h3 id="2-安装nodejs"><a href="#2-安装nodejs" class="headerlink" title="2. 安装nodejs"></a>2. 安装nodejs</h3><p>Hexo是基于nodeJS编写的，所以需要安装一下nodeJs和里面的npm工具。</p>
+<p>windows：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">nodejs</a>选择LTS版本就行了。<br>linux：<br><code>sudo apt-get install nodejs</code><br><code>sudo apt-get install npm</code></p>
+<p>安装完后，打开命令行<br><code>node -v</code><br><code>npm -v</code></p>
+<p>检查一下有没有安装成功</p>
+<p>顺便说一下，windows在git安装完后，就可以直接使用git bash来敲命令行了，不用自带的cmd，cmd有点难用</p>
+<h3 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3. 安装hexo"></a>3. 安装hexo</h3><p>前面git和nodejs安装好后，就可以安装hexo了，你可以先创建一个文件夹blog，然后cd到这个文件夹下（或者在这个文件夹下直接右键git bash打开）。</p>
+<p>输入命令<br><code>npm install -g hexo-cli</code></p>
+<p>依旧用hexo -v查看一下版本<br>至此就全部安装完了。<br>接下来初始化一下hexo</p>
+<p><code>hexo init myblog</code><br>这个myblog可以自己取什么名字都行，然后<br><code>cd myblog //进入这个myblog文件夹</code><br><code>npm install</code></p>
+<ul>
+<li>新建完成后，指定文件夹目录下有：</li>
+<li>node_modules: 依赖包</li>
+<li>public：存放生成的页面</li>
+<li>scaffolds：生成文章的一些模板</li>
+<li>source：用来存放你的文章</li>
+<li>themes：主题</li>
+<li>** _config.yml: 博客的配置文件**</li>
+</ul>
+<p><code>hexo g</code><br><code>hexo serve</code></p>
+<p>打开hexo的服务，在浏览器输入localhost:4000就可以看到你生成的博客了。<br>大概长这样：<br><img src="https://pic1.zhimg.com/v2-d301dfbac9165b21ab1ee0a860f44de4_r.jpg" srcset="/img/loading.gif" alt="wait"><br>使用ctrl+c可以把服务关掉。</p>
+<h3 id="4-GitHub创建个人仓库"><a href="#4-GitHub创建个人仓库" class="headerlink" title="4. GitHub创建个人仓库"></a>4. GitHub创建个人仓库</h3><p>首先，你先要有一个GitHub账户，去注册一个吧。<br>注册完登录后，在<a target="_blank" rel="noopener" href="http://github.com/">Github.com</a>中看到一个New repository，新建仓库<br><img src="https://pic3.zhimg.com/v2-4387cb776ccc72189bc06fd511c1e19e_r.jpg" srcset="/img/loading.gif" alt="wait"></p>
+<p>创建一个和你用户名相同的仓库，后面加github.io,只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名。我这里是已经建过了。<br><img src="https://pic3.zhimg.com/v2-9d5692a0e62fd62f902f1085348f5e7e_r.jpg" srcset="/img/loading.gif" alt="wait"><br>点击create repository。</p>
+<h3 id="5-生成SSH添加到GitHub"><a href="#5-生成SSH添加到GitHub" class="headerlink" title="5. 生成SSH添加到GitHub"></a>5. 生成SSH添加到GitHub</h3><p>回到你的git bash中<br><code>git config --global user.name &quot;yourname&quot;</code><br><code>git config --global user.email &quot;youremail&quot;</code><br>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。</p>
+<p>可以用以下两条，检查一下你有没有输对<br><code>git config user.name</code><br><code>git config user.email</code></p>
+<p>然后创建SSH,一路回车<br><code>ssh-keygen -t rsa -C &quot;youremail&quot;</code></p>
+<p>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。<br><img src="https://pic3.zhimg.com/v2-a9593147853b8f2485f05d1f04d45bb6_r.jpg" srcset="/img/loading.gif" alt="wait"><br>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
+<p>而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key 把你的id_rsa.pub里面的信息复制进去。<br><img src="https://pic3.zhimg.com/v2-aad16de6208ce8a7b2cd51b16a1b2aa2_r.jpg" srcset="/img/loading.gif" alt="wait"><br>在gitbash中，查看是否成功<br><code>ssh -T git@github.com</code></p>
+<h3 id="6-将hexo部署到GitHub"><a href="#6-将hexo部署到GitHub" class="headerlink" title="6.将hexo部署到GitHub"></a>6.将hexo部署到GitHub</h3><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到最后，修改为 YourgithubName就是你的GitHub账户</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-attribute">deploy</span>:<br>  <span class="hljs-attribute">type</span>: git<br>  <span class="hljs-attribute">repo</span>: <span class="hljs-attribute">https</span>:<span class="hljs-comment">//github.com/YourgithubName/YourgithubName.github.io.git</span><br>  <span class="hljs-attribute">branch</span>: master<br></code></pre></td></tr></table></figure>
+<p>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。<br><code>npm install hexo-deployer-git --save</code><br>然后</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs verilog">hexo clean<br>hexo <span class="hljs-keyword">generate</span><br>hexo deploy<br></code></pre></td></tr></table></figure>
+<p>其中 hexo clean清除了你之前生成的东西，也可以不加。 hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写 hexo deploy 部署文章，可以用hexo d缩写</p>
+<p>注意deploy时可能要你输入username和password。</p>
+<p>得到下图就说明部署成功了，过一会儿就可以在<a target="_blank" rel="noopener" href="http://yourname.github.io/">http://yourname.github.io</a> 这个网站看到你的博客了！！</p>
+<p><img src="https://pic4.zhimg.com/v2-8fb2b2026aa0a748594642bb0f53f72b_r.jpg" srcset="/img/loading.gif" alt="wait"></p>
 
             </div>
             <hr>
@@ -371,6 +442,8 @@
   <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
 
 
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
