@@ -191,7 +191,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      289 字
+      804 字
     </span>
   
 
@@ -201,7 +201,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3
+      10
        分钟
     </span>
   
@@ -256,7 +256,46 @@
 <h2 id="下载-Proxifier"><a href="#下载-Proxifier" class="headerlink" title="下载 Proxifier"></a>下载 Proxifier</h2><p><a target="_blank" rel="noopener" href="https://pc.qq.com/detail/13/detail_10593.html">下载安装包</a>,并安装</p>
 <p>如果软件提示需要输入注册码，就用下面的注册码（没提示怎么办？没提示你就偷着乐呗，还能怎么办）</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">L6Z8A</span>-XY<span class="hljs-number">2</span>J<span class="hljs-number">4</span>-BTZ<span class="hljs-number">3</span>P-ZZ<span class="hljs-number">7</span>DF-A<span class="hljs-number">2</span>Q<span class="hljs-number">9</span>C（Portable Edition）<br><br><span class="hljs-attribute">5EZ8G</span>-C<span class="hljs-number">3</span>WL<span class="hljs-number">5</span>-B<span class="hljs-number">56</span>YG-SCXM<span class="hljs-number">9</span>-<span class="hljs-number">6</span>QZAP（Standard Edition）<br><br><span class="hljs-attribute">P427L</span>-<span class="hljs-number">9</span>Y<span class="hljs-number">552</span>-<span class="hljs-number">5433</span>E-<span class="hljs-number">8</span>DSR<span class="hljs-number">3</span>-<span class="hljs-number">58</span>Z<span class="hljs-number">68</span>（MAC）<br><br></code></pre></td></tr></table></figure>
-<h2 id="配置-Proxifier"><a href="#配置-Proxifier" class="headerlink" title="配置 Proxifier"></a>配置 Proxifier</h2><p>打开软件是这样：<br><a target="_blank" rel="noopener" href="https://user-images.githubusercontent.com/59866634/72331334-fc3c0980-36f2-11ea-85ac-6ea92ccfe260.png">images</a><br>点击按钮1 -&gt; Add ，按下图填写（1080 是 Shadowsocks 默认的本地代理端口）</p>
+<h2 id="配置-Proxifier"><a href="#配置-Proxifier" class="headerlink" title="配置 Proxifier"></a>配置 Proxifier</h2><p>打开软件是这样：<br><a target="_blank" rel="noopener" href="https://user-images.githubusercontent.com/59866634/72331334-fc3c0980-36f2-11ea-85ac-6ea92ccfe260.png">images</a><br>点击按钮1 -&gt; Add ，按下图填写（1080 是 Shadowsocks 默认的本地代理端口）<br><img src="https://user-images.githubusercontent.com/59866634/72331369-0fe77000-36f3-11ea-95da-864d876c58c5.png" srcset="/img/loading.gif" alt="wait"><br>点击两次 OK（其中会有一次弹框，点「是」）。然后点击按钮2：</p>
+<h2 id="首先我们要让-Shadowsocks-自身不被自己代理（不然就死循环了）。"><a href="#首先我们要让-Shadowsocks-自身不被自己代理（不然就死循环了）。" class="headerlink" title="首先我们要让 Shadowsocks 自身不被自己代理（不然就死循环了）。"></a>首先我们要让 Shadowsocks 自身不被自己代理（不然就死循环了）。</h2><p>点击 Add，按下图填写：<br><img src="https://user-images.githubusercontent.com/59866634/72331464-31485c00-36f3-11ea-92ba-750dfab5b250.png" srcset="/img/loading.gif" alt="wait"><br>其中第二项的 shadowsocks.exe 是文件路径，如果你找不到，可以直接把 shadowsocks.exe 这个单词复制进去，一样能用。如果你用的是 ssr，那么就要把 shadowsocksr.exe 填进去。多个值用分号隔开。</p>
+<p>如果你用的是 Trojan，那么这里应该填 Trojan 可执行文件的文件名，比如 trojan-qt5.exe</p>
+<h2 id="然后让所有流向-github-com-的流量走代理"><a href="#然后让所有流向-github-com-的流量走代理" class="headerlink" title="然后让所有流向 *.github.com 的流量走代理"></a>然后让所有流向 *.github.com 的流量走代理</h2><p>点击 Add，按下图填写：<br><img src="https://user-images.githubusercontent.com/59866634/72331495-40c7a500-36f3-11ea-8061-53a2e1383c31.png" srcset="/img/loading.gif" alt="wait"><br>最终结果如下：<br><img src="https://user-images.githubusercontent.com/59866634/72331517-47561c80-36f3-11ea-9edd-46a6cc953d7a.png" srcset="/img/loading.gif" alt="wait"><br>然后只要你开着 Shadowsocks（全局代理是否开启无所谓，我一般选择禁用或手动）、Proxifier，那么 git clone 就能满速了！</p>
+<h1 id="Mac命令行FQ"><a href="#Mac命令行FQ" class="headerlink" title="Mac命令行FQ"></a>Mac命令行FQ</h1><ol>
+<li>安装 homebrew<br><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></li>
+<li>安装 proxychains-ng<br><code>brew install proxychains-ng</code></li>
+<li>配置proxychains-ng</li>
+</ol>
+<ul>
+<li>安装 proxychains-ng</li>
+<li>下载配置文件（如果下面的命令执行失败，那你就自己下载<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/FrankFang/dot-files/master/proxychains.conf">proxychains.conf</a>，然后将其移动到 ~/.proxychains.conf）<ul>
+<li><code>curl -L https://raw.githubusercontent.com/FrankFang/dot-files/master/proxychains.conf &gt; ~/.proxychains.conf</code></li>
+</ul>
+</li>
+<li>添加 bash alias，运行<ul>
+<li><code>touch ~/.bashrc; echo &#39;alias pc=&quot;proxychains4 -f ~/.proxychains.conf&quot;&#39; &gt;&gt; ~/.bashrc</code></li>
+</ul>
+</li>
+<li>source ~/.bashrc</li>
+<li>pc git clone xxx 或者 pc brew install xxx –verbose，那么这个命令行就是翻墙的</li>
+</ul>
+<h1 id="Linux命令行FQ"><a href="#Linux命令行FQ" class="headerlink" title="Linux命令行FQ"></a>Linux命令行FQ</h1><ol>
+<li>去 github 下载 proxychains-ng 的源码</li>
+<li>make 编译<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs vim"># needs <span class="hljs-keyword">a</span> working C <span class="hljs-keyword">compiler</span>, preferably gcc<br>./configure --prefix=/usr --sysconfdir=/etc<br><span class="hljs-keyword">make</span><br>[optional] sudo <span class="hljs-keyword">make</span> install<br>[optional] sudo <span class="hljs-keyword">make</span> install-config (installs proxychains.<span class="hljs-keyword">conf</span>)<br><br><span class="hljs-keyword">if</span> you dont install, you can use proxychains from the build directory<br>like thi<span class="hljs-variable">s:</span> ./proxychains4 -<span class="hljs-keyword">f</span> src/proxychains.<span class="hljs-keyword">conf</span> telnet google.<span class="hljs-keyword">com</span> <span class="hljs-number">80</span><br></code></pre></td></tr></table></figure></li>
+<li>配置proxychains-ng</li>
+</ol>
+<ul>
+<li>安装 proxychains-ng</li>
+<li>下载配置文件 （如果下面的命令执行失败，那你就自己下载，<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/FrankFang/dot-files/master/proxychains.conf">proxychains.conf</a>然后将其移动到 ~/.proxychains.conf）<ul>
+<li><code>curl -L https://raw.githubusercontent.com/FrankFang/dot-files/master/proxychains.conf &gt; ~/.proxychains.conf</code></li>
+</ul>
+</li>
+<li>添加 bash alias，运行<ul>
+<li><code>touch ~/.bashrc; echo &#39;alias pc=&quot;proxychains4 -f ~/.proxychains.conf&quot;&#39; &gt;&gt; ~/.bashrc</code></li>
+</ul>
+</li>
+<li>source ~/.bashrc</li>
+<li>pc git clone xxx 或者 pc brew install xxx –verbose，那么这个命令行就是翻墙的。</li>
+</ul>
 
             </div>
             <hr>
