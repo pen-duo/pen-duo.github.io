@@ -1,0 +1,930 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="前端,计算机,程序员">
+  <meta name="author" content="PengYiDuo">
+  <meta name="keywords" content="前端,计算机,程序员">
+  <title>Peng的个人博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"pen-duo.github.io","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>pen-duo's space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://static.zkqiang.cn/images/20190728030406.jpeg-slim') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      PengYiDuo
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-03 18:44" pubdate>
+        2021年3月3日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      5.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      56
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <h1 id="乘风破浪学习Vue-下"><a href="#乘风破浪学习Vue-下" class="headerlink" title="乘风破浪学习Vue(下)"></a>乘风破浪学习Vue(下)</h1><h1 id="一-路由"><a href="#一-路由" class="headerlink" title="一.路由"></a>一.路由</h1><p><strong>路由</strong>就是通过互联的网络把信息从源地址传输到目的地址的活动。(维基百科)</p>
+<p>通俗点来说:就是将数据通过互联网从一个地方传输到另一个地方。(url与页面的映射关系)</p>
+<p>路由器提供了两种机制:路由和转送</p>
+<ul>
+<li>  路由是决定数据包从来源到目的地的路径(确定传输路径)</li>
+<li>  转送将输入端的数据转移到合适的输出(传输)</li>
+</ul>
+<p><strong>路由表</strong>:本质上就是一个映射表,决定了数据包的指向（本质上是IP地址与MAC地址的一一对应）</p>
+<h1 id="二-后端渲染与后端路由"><a href="#二-后端渲染与后端路由" class="headerlink" title="二.后端渲染与后端路由"></a>二.后端渲染与后端路由</h1><h2 id="2-1-后端渲染"><a href="#2-1-后端渲染" class="headerlink" title="2.1 后端渲染"></a>2.1 后端渲染</h2><p>早期的网站开发整个HTML页面是由服务器来渲染的.</p>
+<p>服务器直接生产渲染好对应的HTML页面,返回给客户端进行显示。</p>
+<p>早期我们早浏览器上输入一个url触发的过程</p>
+<ol>
+<li> 一个页面有自己对应的网页,也就是URL。</li>
+<li> URL会发送到服务器,服务器会通过正则对改URL进行匹配,并且最后交给一个控制器进行处理。</li>
+<li> controller进行各种处理,最终生成HTML或则数据,返回前端。</li>
+<li> 这就完成了一个IO操作。</li>
+</ol>
+<h2 id="2-2-后端路由"><a href="#2-2-后端路由" class="headerlink" title="2.2 后端路由"></a>2.2 后端路由</h2><p>当我们网页需要请求不同的路径内容时,交给服务器0来进行处理，服务器渲染好整个页面,并且将页面返回给客户端。</p>
+<p>浏览器中输入url,直接在服务器中找对应得已经渲染好的页面到浏览器。</p>
+<h3 id="2-2-1-后端路由的优点"><a href="#2-2-1-后端路由的优点" class="headerlink" title="2.2.1 后端路由的优点"></a>2.2.1 后端路由的优点</h3><p>这种情况下渲染好的页面,不需要单独加载任何的js和css，可以直接交给浏览器展示,这样也有利于SEO的优化。</p>
+<h3 id="2-2-2-后端路由的缺点"><a href="#2-2-2-后端路由的缺点" class="headerlink" title="2.2.2 后端路由的缺点:"></a>2.2.2 后端路由的缺点:</h3><ol>
+<li> 一种情况是整个页面的模块都由后端人员来编写和维护的</li>
+<li> 另一种情况是前端开发人员如果要开发网页,需要通过PHP和java等语言来编写页面代码</li>
+<li> 而且通常情况下HTML代码和数据以及对应的逻辑会混合在一起,编写和维护都是非常糟糕的事情。</li>
+</ol>
+<h1 id="三-前后端分离与前端渲染"><a href="#三-前后端分离与前端渲染" class="headerlink" title="三.前后端分离与前端渲染"></a>三.前后端分离与前端渲染</h1><h2 id="3-1-前后端分离"><a href="#3-1-前后端分离" class="headerlink" title="3.1 前后端分离"></a>3.1 前后端分离</h2><p><strong>前后端分离的开发模式</strong></p>
+<ul>
+<li>  随着AJAX的出现,有了前后端的开发模式。</li>
+<li>  后端只提供Api来返回数据,前端通过AJAX获取数据,并且可以通过Javasxript将数据渲染到页面中。</li>
+<li>  这样做最大的优点那就是前后端责任的清晰,后端专注于数据上,前端专注于交互与可视化上。</li>
+<li>  并且当移动端出现后,后端不需要进行任何处理,依然使用之前的一套API即可。</li>
+</ul>
+<h2 id="3-2-前端渲染"><a href="#3-2-前端渲染" class="headerlink" title="3.2 前端渲染"></a>3.2 前端渲染</h2><p>浏览器中显示的网页中的大部分内容,都是由前端写的js代码在浏览器中执行，最后渲染出来的网页。</p>
+<h2 id="3-3-前后端分离没有解决的问题"><a href="#3-3-前后端分离没有解决的问题" class="headerlink" title="3.3 前后端分离没有解决的问题"></a>3.3 前后端分离没有解决的问题</h2><p>但是此时依然使用的是后端路由,也就是从浏览器中输入一个url需要去服务器请求这个url对应的页面。</p>
+<h1 id="四-单页面富应用-SPA"><a href="#四-单页面富应用-SPA" class="headerlink" title="四.单页面富应用(SPA)"></a>四.单页面富应用(SPA)</h1><h2 id="4-1-什么是SPA"><a href="#4-1-什么是SPA" class="headerlink" title="4.1 什么是SPA"></a>4.1 什么是SPA</h2><p>概念:就是只有一张Web页面的应用,Web应用即使不刷新也在不同的页面间切换。</p>
+<p>SPA解决了浏览器前进、后退等机制被破坏等问题。并且页面访问会被浏览器保存。</p>
+<h2 id="4-2-前端路由"><a href="#4-2-前端路由" class="headerlink" title="4.2 前端路由"></a>4.2 前端路由</h2><p>当我们在浏览器中输入一个url时,SPA会将这个url所在的网站的所有页面资源请求下来(其实就是一个包含多个组件的页面),然后当我们再访问这个网站中的任何页面,我们就不再从服务器中去请求这个网站的资源了,而是从我们请求的此网站的页面资源中去筛选出我们想要的页面。</p>
+<p><strong>前端路由:由前端来管理url与页面的映射关系。</strong></p>
+<p><strong>前端路由的核心:改变URL,但是页面不进行整体的刷新。</strong></p>
+<h2 id="4-3-SPA的特点"><a href="#4-3-SPA的特点" class="headerlink" title="4.3 SPA的特点"></a>4.3 SPA的特点</h2><p>SPA最主要的特点就是在前后端分离的基础上加了一层前端路由,也就是我们的vue-router.</p>
+<h1 id="五-vue-router的使用"><a href="#五-vue-router的使用" class="headerlink" title="五.vue-router的使用"></a>五.vue-router的使用</h1><h2 id="5-1-vue-router简介"><a href="#5-1-vue-router简介" class="headerlink" title="5.1 vue-router简介"></a>5.1 vue-router简介</h2><p>vue-router是vue.js官方的路由插件,它和vue.js是深度集成的,适合用于构建SPA。</p>
+<p>vue-router是基于路由和组件的</p>
+<ul>
+<li>  路由用于设定访问路径,将路径和组件映射起来</li>
+<li>  在vue-router的单页面应用中,页面的路径的改变就是组件的切换。</li>
+</ul>
+<h2 id="5-2-vue-router的安装与起步"><a href="#5-2-vue-router的安装与起步" class="headerlink" title="5.2 vue-router的安装与起步"></a>5.2 vue-router的安装与起步</h2><p>步骤一:安装</p>
+<p>步骤二:在模块化过程中使用它</p>
+<ol>
+<li><p> 第一步: 导入路由对象,并且调用Vue.use(VueRouter)</p>
+</li>
+<li><p> 第二步:创建路由实例,并且传入路由映射配置</p>
+</li>
+<li><p>第三步:在Vue实例中挂载创建的路由实例</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/1554318/1610279143476-6c20fb13-7548-405e-a8cb-d7444e2a49ca.png" srcset="/img/loading.gif" alt="1.png" title="1.png"> </p>
+</li>
+</ol>
+<p>importVuefromvue</p>
+<p>importVueRouterfromvue-router</p>
+<p>Vue.use(VueRouter)</p>
+<p>步骤三:使用vue-router</p>
+<p>第一步:创建路由组件</p>
+<p>第二步:配置路由映射:组件和路径映射关系</p>
+<p>第三步:使用路由:用过<router-link>和<router-view></p>
+<p><router-link>：该标签是一个vue-router已经内置的组件,它会被渲染成一个<a>便签</p>
+<p><router-view>:该标签会根据当前的路径,动态渲染出不同的组件。</p>
+<h2 id="5-3-默认路由"><a href="#5-3-默认路由" class="headerlink" title="5.3 默认路由"></a>5.3 默认路由</h2><p>当我们进入某个网站时,我们希望默认显示首页内容,而不是需要用户点击首页才显示。</p>
+<p>默认路由 配置:</p>
+<p>我们在routes中又配置了一个映射</p>
+<p>path配置的是根路径:/</p>
+<p>redirect是重定向,也就是我们将根路径重定向到/home的路径下,这样就可以得到我们想要的结果了。</p>
+<p>修改路由为history模式</p>
+<p>默认的路由模式里面总是会带一个#符号,我们可以通过在router实例中加mode:”history”来解决此问题</p>
+<h2 id="5-4-router-link的其他属性补充"><a href="#5-4-router-link的其他属性补充" class="headerlink" title="5.4 router-link的其他属性补充"></a>5.4 router-link的其他属性补充</h2><ul>
+<li>  to:指定跳转路径</li>
+<li>  tag:渲染成指定标签</li>
+<li>  active-class:当<router-link>对应得路由匹配成功时,会自动给当前元素设置一个router-link-active的class.设置active-class可以修改默认的名称。</li>
+</ul>
+<p>动态路由的实现</p>
+<p>在某些情况下,一个页面的path路径可能是不确定的,比如我们进入用户界面时,希望是如下的路径:</p>
+<p>/user/aaa或/user/bbb</p>
+<p>除了有前面的/user之外,后面还跟上了用户的ID</p>
+<p>这种path和Component的匹配关系,我们称之为动态路由(也是路由传递数据的一种方式)</p>
+<p>在路由映射中如下配置</p>
+<p> <img src="https://cdn.nlark.com/yuque/0/2021/png/1554318/1610279894205-fbb07f76-5fd7-4c17-b02e-046a69653f4c.png" srcset="/img/loading.gif" alt="2.png" title="2.png"> </p>
+<p>path:/user/:userId</p>
+<p>component:User</p>
+<p>在App.vue中</p>
+<p> <img src="https://cdn.nlark.com/yuque/0/2021/png/1554318/1610279997105-8ab9ce5f-1462-4ad4-b4f9-f6e3212f7248.png" srcset="/img/loading.gif" alt="4.png" title="4.png"> </p>
+<p>&lt;router-linkv-bind.tour/+userid”/router-link</p>
+<p> <img src="https://cdn.nlark.com/yuque/0/2021/png/1554318/1610279993329-f9dbff5c-b970-48b5-8fe5-11d6028e8a4a.png" srcset="/img/loading.gif" alt="3.png" title="3.png"> </p>
+<p>data</p>
+<p>return</p>
+<p>iisi</p>
+<p>userId:</p>
+<p>imgURL:</p>
+<p>在User.vue中</p>
+<p> <img src="https://cdn.nlark.com/yuque/0/2021/png/1554318/1610280047676-010a5e0c-7bfe-4287-bf63-23842d867922.png" srcset="/img/loading.gif" alt="5.png" title="5.png"> </p>
+<p>computed:</p>
+<p>userIdO</p>
+<p>returnthis.sroute.param.userId</p>
+<h2 id="5-5-路由懒加载"><a href="#5-5-路由懒加载" class="headerlink" title="5.5 路由懒加载"></a>5.5 路由懒加载</h2><p>官方解释</p>
+<p>当打包构建应用时,javascript包会变得非常大,影响页面加载</p>
+<p>如果我们能把不同路由对于的组件分隔成不同的代码块,然后当路由被访问的时候才加载对于组件,这样就更加高效了</p>
+<p>通俗解释</p>
+<p>首先我们知道路由中通常会定义很多不同的界面。</p>
+<p>这个页面最后被打包到哪里呢？一般情况下,是放在一个JS文件中</p>
+<p>但是,页面这么多放在一个js文件中,必然会造成这个页面非常的发</p>
+<p>如果我们一次性从服务器请求下这个页面,可能需要花费一定的时间甚至用户的电脑上还可能出现短暂空白情况。</p>
+<p>为了避免这种情况,我们可以使用懒加载</p>
+<p>路由懒加载做了什么呢?</p>
+<p>路由懒加载的主要作用就是将路由对应的组件打包成一个个js代码块</p>
+<p>只有在这个路由被访问到的时候,才加载对应的组件</p>
+<p>引用后直接使用与实现懒加载</p>
+<p> <img src="https://cdn.nlark.com/yuque/0/2021/png/1554318/1610281376802-908c32c0-fccf-478c-8f0d-e2a87ec4db78.png" srcset="/img/loading.gif" alt="1.png" title="1.png"> </p>
+<p>constroutes</p>
+<p>../components/Home</p>
+<p>importHomefrom</p>
+<p>../components/About</p>
+<p>importaboutfrom</p>
+<p>path://home,</p>
+<p>import(../components/Home”)</p>
+<p>component:O</p>
+<p>Vue.use(VueRouter);</p>
+<p>constroutes</p>
+<p>引用后直接使用</p>
+<p>path:/about’,</p>
+<p>mportC../components/About</p>
+<p>component:(O)</p>
+<p>Path:/home’,</p>
+<p>万,</p>
+<p>cOmponent:Home</p>
+<p>Ji</p>
+<p>S一</p>
+<p>Path:”/about’,</p>
+<p>static</p>
+<p>cOmponent:About</p>
+<p>CSS</p>
+<p>万,</p>
+<p>];</p>
+<p>0.09675c5e37c95c6e65ff.js</p>
+<p>1.266ad04847546fd5bdb2.js</p>
+<p>static</p>
+<p>app.513coad5da30a20ee757.js</p>
+<p>css</p>
+<p>manifest.2307a2fbeao88edd4j</p>
+<p>vendor.426ef21560bb1458790e.js</p>
+<p>app.0c28233891bf98a530js</p>
+<p>010</p>
+<p>index.htmi</p>
+<p>manifest.2a269a05c33dfc65f8.js</p>
+<p>vendor.1748317793fd05195f8.js</p>
+<p>index.html</p>
+<h2 id="5-6-嵌套路由"><a href="#5-6-嵌套路由" class="headerlink" title="5.6 嵌套路由"></a>5.6 嵌套路由</h2><p>嵌套路由是一个很常见的功能</p>
+<p>比如在home页面中,我们希望通过/home/news和/home/message访问一些内容</p>
+<p>一个路径映射一个组件,访问这两个路径也会分别渲染这两个组件。</p>
+<p>实现嵌套路由有两个步骤</p>
+<p>创建对应的子组件,并且在路由映射中配置对应的子路由</p>
+<p>在组件内部使用<code>&lt;router-view&gt;</code>标签</p>
+<h1 id="六-Vuex的基本使用"><a href="#六-Vuex的基本使用" class="headerlink" title="六.Vuex的基本使用"></a>六.Vuex的基本使用</h1><h2 id="6-1-什么是Vuex"><a href="#6-1-什么是Vuex" class="headerlink" title="6.1 什么是Vuex"></a>6.1 什么是Vuex</h2><p>Vuex就是一个状态管理模式，为什么叫模式？因为Vuex包含了一套对state(状态)的操作规范，集中存储管理应用的所有组件的状态</p>
+<blockquote>
+<p>状态管理</p>
+</blockquote>
+<ul>
+<li><p>  简单来说就是管理各个组件共享的数据，类似session  </p>
+</li>
+<li><p>  session可以存数据，存的过程就是管理，数据的每一次赋值就是当次状态。  </p>
+</li>
+<li><p>  Vuex在Vue实例顶层中。</p>
+</li>
+</ul>
+<blockquote>
+<p>什么状态需要Vuex去管理？</p>
+</blockquote>
+<ul>
+<li>  比如用户的登录的状态（token）、用户的信息（头像、名称、地理位置信息）等等</li>
+<li>  比如商品的收藏，购物车的商品等等</li>
+<li>  这些状态应该是响应式的，用户昵称、头像修改了需要响应</li>
+</ul>
+<blockquote>
+<p>Vuex简单模型</p>
+</blockquote>
+<p>网络异常，图片无法展示</p>
+<p>|</p>
+<ul>
+<li>  <strong>state</strong>，驱动应用的数据源；</li>
+<li>  <strong>view</strong>，以声明方式将 <strong>state</strong> 映射到视图；</li>
+<li>  <strong>actions</strong>，响应在 <strong>view</strong> 上的用户输入导致的状态变化。</li>
+<li>  这是一个单页面数据流向，比如想要修改用户昵称，当前用户昵称的状态是A，通过输入框输入了新的昵称B，调用ajax请求后端修改成功后将state改成B，然后视图响应用户昵称的变化从A到B。</li>
+</ul>
+<p>但是，当我们的应用遇到<strong>多个组件共享状态</strong>时，单向数据流的简洁性很容易被破坏：</p>
+<ul>
+<li>  多个视图依赖于同一状态。</li>
+<li>  来自不同视图的行为需要变更同一状态。</li>
+<li>  所以我们需要vuex的规范操作来管理状态。</li>
+</ul>
+<h2 id="6-2-Vuex基本使用"><a href="#6-2-Vuex基本使用" class="headerlink" title="6.2  Vuex基本使用"></a>6.2  Vuex基本使用</h2><p><strong>1.新建一个vuecli2工程</strong></p>
+<p>使用<code>vue init webpack 01-vuex-vuecli2</code>新建一个vue项目。</p>
+<p><strong>2.修改<code>App.vue</code>并新建一个<code>HelloVuex.vue</code>组件</strong></p>
+<blockquote>
+<p>HelloVuex.vue</p>
+</blockquote>
+<p>此时我们使用了父子组件通信来完成子组件<code>HelloVuex</code>获取父组件的<code>count</code>。</p>
+<hr>
+<p>网络异常，图片无法展示</p>
+<p>|</p>
+<p>如果不是父子组件如何通信，此时就需要vuex了，还是这这2个组件，现在不使用父子通信，直接使用vuex。</p>
+<p><strong>3.使用vuex管理状态</strong></p>
+<ul>
+<li><p>  使用<code>npm install vuex --save</code>安装Vuex  </p>
+</li>
+<li><p>  安装插件Vue.use(Vuex)`，在src下新建一个store文件夹，新建一个index.js</p>
+</li>
+<li><p>  修改<code>App.vue</code>和<code>HelloVuex.vue</code>，直接使用<code>$store.state.count</code>获取count值</p>
+</li>
+</ul>
+<p>一般不会直接使用<code>$store.state.count</code>获取vuex中的状态，也不是直接使用<code>$store.state.count++</code>来操作vuex中的状态。</p>
+<h2 id="6-3-Vuex的流程"><a href="#6-3-Vuex的流程" class="headerlink" title="6.3 Vuex的流程"></a>6.3 Vuex的流程</h2><p>网络异常，图片无法展示</p>
+<p>|</p>
+<ul>
+<li><p>  Vue Components是vue组件</p>
+</li>
+<li><p>  Mutations ：更改 Vuex 的 store 中的状态的唯一方法是提交 mutation</p>
+</li>
+<li><p>  State 是vuex中状态的集合</p>
+</li>
+<li><p>  Actions与Mutations 类似，经常与后端交互，不同在于：</p>
+</li>
+<li><p>  Action 提交的是 mutation，而不是直接变更状态。</p>
+</li>
+<li><p>  Action 可以包含任意异步操作。</p>
+</li>
+</ul>
+<p>组件中修改state，通过提交 mutation，修改完成后vuex帮我们响应到vue组件上。</p>
+<blockquote>
+<p>修改index.js使用mutation</p>
+</blockquote>
+<blockquote>
+<p>修改App.vue提交mutation</p>
+</blockquote>
+<blockquote>
+<p>测试</p>
+</blockquote>
+<p>网络异常，图片无法展示</p>
+<p>|</p>
+<p>测试发现没有问题与直接使用<code>$store.state.count++</code>效果一致，通过提交mutation修改了状态state，在<code>vue-devtools</code>中也能跟踪state变化以及提交的mutation。</p>
+<h2 id="6-4-Vuex的核心概念"><a href="#6-4-Vuex的核心概念" class="headerlink" title="6.4 Vuex的核心概念"></a>6.4 Vuex的核心概念</h2><ul>
+<li>  State</li>
+<li>  Getters</li>
+<li>  Mutation</li>
+<li>  Action</li>
+<li>  Moudule</li>
+</ul>
+<h3 id="6-4-1-State（单一状态树）"><a href="#6-4-1-State（单一状态树）" class="headerlink" title="6.4.1 State（单一状态树）"></a>6.4.1 State（单一状态树）</h3><p>Vuex 使用<strong>单一状态树</strong>——是的，用一个对象就包含了全部的应用层级状态。至此它便作为一个“唯一数据源 (<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Single_source_of_truth">SSOT</a>)”而存在。。这也意味着，每个应用将仅仅包含一个 store 实例。单一状态树让我们能够直接地定位任一特定的状态片段，在调试的过程中也能轻易地取得整个当前应用状态的快照。</p>
+<p>简单说就是把数据所有有关的数据封装到一个对象中，这个对象就是store实例，无论是数据的状态（state），以及对数据的操作（mutation、action）等都在store实例中，便于管理维护操作。</p>
+<p>state的操作在19.2.Vuex的基本使用已经了解，直接通过<code>this.$store.state</code>获取state对象。</p>
+<h3 id="6-4-2-Getters"><a href="#6-4-2-Getters" class="headerlink" title="6.4.2 Getters"></a>6.4.2 Getters</h3><p>Getters类似计算属性，帮我们做一些重复的事情。</p>
+<p>例如有这样一个store实例，我们需要获取<strong>年龄大于20岁的学生数量</strong>：</p>
+<p>你可能会这样写这样一个计算属性去获取<strong>年龄大于20岁的学生数量</strong>：</p>
+<p>如果很多组件中需要<strong>年龄大于20岁的学生数量</strong>，你可能会将这个计算属性复制，将filter函数写很多遍，但是如果你有<strong>Getters</strong>。</p>
+<blockquote>
+<p>在store实例中定义getters</p>
+</blockquote>
+<blockquote>
+<p>通过属性调用getters</p>
+</blockquote>
+<p>现在只需要调用getters的getStudents对象，就能获取数量。</p>
+<p>如果你想查询指定ID（传入ID）的学生信息。</p>
+<p>你也可以通过让 getter 返回一个函数，来实现给 getter 传参。在你对 store 里的数组进行查询时非常有用。</p>
+<blockquote>
+<p>定义getters</p>
+</blockquote>
+<blockquote>
+<p>通过方法访问</p>
+</blockquote>
+<p>传入学生ID为110，输出</p>
+<p>网络异常，图片无法展示</p>
+<p>|</p>
+<h3 id="4-5-Mutation（状态更新）"><a href="#4-5-Mutation（状态更新）" class="headerlink" title="4.5 Mutation（状态更新）"></a>4.5 Mutation（状态更新）</h3><ul>
+<li>  Vuex的store状态更新的唯一方式：<strong>提交Mutation</strong></li>
+</ul>
+<ul>
+<li>  Mutation主要包括两个部分：</li>
+</ul>
+<ol>
+<li> 字符串的<strong>事件类型（type）</strong></li>
+<li> 一个<strong>回调函数（handler）</strong>，这个回调函数就是我们实际进行状态更改的地方，该回调函数的<strong>第一个参数就是state</strong></li>
+</ol>
+<ul>
+<li><p>  Mutation的定义方式：</p>
+</li>
+<li><p>  通过Mutation更新</p>
+</li>
+</ul>
+<h4 id="6-5-1-mutation接受单个参数"><a href="#6-5-1-mutation接受单个参数" class="headerlink" title="6.5.1 mutation接受单个参数"></a>6.5.1 mutation接受单个参数</h4><p>mutation携带的参数被称为是mutation的载荷（Payload）</p>
+<p>在19.2的工程的基础上修改，添加2个按钮分别是让state中的<strong>count+5、count+10</strong>，增加2个按钮</p>
+<p>新增<strong>addCount</strong>方法:</p>
+<p>新增一个mutation</p>
+<p>测试：</p>
+<hr>
+<p>网络异常，图片无法展示</p>
+<p>|</p>
+<h4 id="6-5-2-mutation接受多个参数"><a href="#6-5-2-mutation接受多个参数" class="headerlink" title="6.5.2 mutation接受多个参数"></a>6.5.2 mutation接受多个参数</h4><p>如果mutation需要接受多个参数，此时可以传一个对象，例如新增一个功能点击按钮新增一个学生，此时需要传学生的ID、姓名、年龄，可以封装成一个学生对象传入。</p>
+<p><strong>1.新增按钮</strong></p>
+<p><strong>2.新增mutation</strong></p>
+<p>3.<strong>新增方法</strong></p>
+<p><strong>4.测试</strong></p>
+<p>网络异常，图片无法展示</p>
+<p>|</p>
+<h4 id="6-5-3-mutation的提交风格"><a href="#6-5-3-mutation的提交风格" class="headerlink" title="6.5.3 mutation的提交风格"></a>6.5.3 mutation的提交风格</h4><p>1.普通提交风格</p>
+<p>此时count传过去的就是count=10</p>
+<p>2.特殊的提交封装</p>
+<p>此时count传过去是一个对象payload（载荷）</p>
+<h4 id="6-5-4-Vuex的响应式原理"><a href="#6-5-4-Vuex的响应式原理" class="headerlink" title="6.5.4 Vuex的响应式原理"></a>6.5.4 Vuex的响应式原理</h4><ol>
+<li><p> Vuex的store的state是响应式的，当state中的数据发生改变时，Vue组件会自动更新。  </p>
+</li>
+<li><p> 响应式需要遵循规则</p>
+</li>
+</ol>
+<ul>
+<li>  state的对象需要初始化</li>
+<li>  如果需要给state中的对象添加新属性的时候，使用以下方式</li>
+</ul>
+<ol>
+<li><p> 使用Vue.set(obj, ‘newProp’, 123)</p>
+</li>
+<li><p> 用新对象替换就对象</p>
+</li>
+<li><p> 在state中增加一个对象user</p>
+</li>
+</ol>
+<p>4.在app.vue增加按钮修改信息</p>
+<p>5.app.vue增加按updateInfo()方法</p>
+<p>6.在mutation中添加updateInfo()</p>
+<p>7.点击<strong>修改信息</strong>按钮，发现state的值变化了，但是页面没有响应变化</p>
+<p>网络异常，图片无法展示</p>
+<p>|</p>
+<p>8.使用<code>Vue.set()</code>方法支持响应式</p>
+<p>9.再次点击<strong>修改信息</strong>按钮，发现变响应式了</p>
+<p>网络异常，图片无法展示</p>
+<p>|</p>
+<blockquote>
+<p>总结</p>
+</blockquote>
+<ol>
+<li> state未初始化属性（<code>age</code>）</li>
+</ol>
+<ul>
+<li>  使用直接赋值的方式不能响应式</li>
+<li>  需要使用 <code>Vue.set(state.user, &#39;age&#39;, 12)</code></li>
+</ul>
+<ol start="2">
+<li><p> state已经初始化了，可以使用直接赋值方式  </p>
+</li>
+<li><p> 关于删除属性</p>
+</li>
+</ol>
+<p>// 该方法没有响应式，需要使用vue.delete</p>
+<p>     // delete state.user.age</p>
+<p>     Vue.delete(state.user, age)// 响应式删除age</p>
+<h4 id="6-5-5-mutation的类型常量"><a href="#6-5-5-mutation的类型常量" class="headerlink" title="6.5.5 mutation的类型常量"></a>6.5.5 mutation的类型常量</h4><p>一个vue文件中有关mutation的方法太多了，常常可能写错，所有可以在store文件夹下定义一个<code>mutation-type.js</code>的常量。</p>
+<ol>
+<li> 定义一个<code>mutation-type.js</code>的常量</li>
+</ol>
+<p>2.修改<code>App.vue</code>的updateinfo方法</p>
+<ol start="3">
+<li> 修改store的<code>index.js</code>，将mutation的方法名也改成常量使用方式</li>
+</ol>
+<p>这样保证了所有的方法都定义在<code>mutation-type.js</code>中，不会出问题。</p>
+<h3 id="6-6-Actions"><a href="#6-6-Actions" class="headerlink" title="6.6 Actions"></a>6.6 Actions</h3><p>使用mutation操作更新state的时候，使用异步修改数据。</p>
+<ol>
+<li><p> 修改updateInfo()方法</p>
+</li>
+<li><p> 点击<strong>修改信息</strong>按钮</p>
+</li>
+</ol>
+<p>网络异常，图片无法展示</p>
+<p>|</p>
+<p>发现页面的数据改变了，但是vue-devtools工具中并未跟踪到改变。所以我们不要在mutation中进行异步操作。</p>
+<blockquote>
+<p>定义</p>
+</blockquote>
+<p>Action 类似于 mutation，不同在于：</p>
+<ul>
+<li>  Action 提交的是 mutation，而不是直接变更状态。</li>
+<li>  Action 可以包含任意异步操作。</li>
+</ul>
+<ol>
+<li><p> 新增一个mutation</p>
+</li>
+<li><p> 新增一个actions</p>
+</li>
+<li><p> 在<code>App.vue</code>中新增一个按钮修改user对象姓名</p>
+</li>
+<li><p> 给按钮新增方法</p>
+</li>
+<li><p> 点击<code>异步修改信息</code>按钮测试</p>
+</li>
+</ol>
+<p>网络异常，图片无法展示</p>
+<p>|</p>
+<p>在点击按钮之后，信息修改了，dev-tools也能跟踪到state的变化。通过<code>$store.dispacth()</code>方法来调用actions，发送异步请求，在actions中需要提交mutation来修改state。</p>
+<p>6.actions回调，在异步操作后，成功或者失败都应该会有回调，<code>$store.dispacth()</code>返回一个Promise对象，修改actions，返回一个Promise对象，成功调用<code>resolve(msg)</code>，将成功的<code>msg</code>传入（<strong>不理解的请看一下18章的Promise对象详解</strong>）。</p>
+<p>7.修改<code>aUpdateInfo()</code>方法，获取回调参数<code>msg</code>，此时的<code>response</code>就是actions中回调的<code>msg</code>，也可以支持失败的回调，只要actions中使用了reject，在<code>aUpdateInfo()</code>方法中catch回调结果就能获取resjct对象回传结果。</p>
+<p>8.再次点击<code>异步修改信息</code>，打印结果信息</p>
+<p> <img src="https://github.com/zhangtianyi0110/VueLearnNotes/raw/master/19-vuex/images/19-12.png" srcset="/img/loading.gif"> </p>
+<blockquote>
+<p>Actions 支持同样的载荷方式(<strong>payload</strong>)和对象方式进行分发</p>
+</blockquote>
+<h3 id="6-7-moudules（模块）"><a href="#6-7-moudules（模块）" class="headerlink" title="6.7 moudules（模块）"></a>6.7 moudules（模块）</h3><p>由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。当应用变得非常复杂时，store 对象就有可能变得相当臃肿。</p>
+<p>为了解决以上问题，Vuex 允许我们将 store 分割成<strong>模块（module）</strong>。每个模块拥有自己的 state、mutation、action、getter、甚至是嵌套子模块——从上至下进行同样方式的分割。</p>
+<p>比如这样</p>
+<blockquote>
+<p>模块的局部状态</p>
+</blockquote>
+<ol>
+<li> 模块内部的mutation 和 getter，接收的第一个参数是<strong>模块的局部状态对象</strong>。</li>
+</ol>
+<ol start="2">
+<li> 模块内部的 action，局部状态是 <code>context.state</code> ，根节点状态则为 <code>context.rootState</code>。</li>
+</ol>
+<ol start="3">
+<li> 对于模块内部的 getter，第三个参数是根节点状态。</li>
+</ol>
+<blockquote>
+</blockquote>
+<p>注意actions的context</p>
+<p><code>&#123; state, commit, rootState &#125;</code>对应<code>context</code>对象中的属性，使用ES6的对象解构。</p>
+<h3 id="6-8-项目结构"><a href="#6-8-项目结构" class="headerlink" title="6.8 项目结构"></a>6.8 项目结构</h3><p>Vuex 并不限制你的代码结构。但是，它规定了一些需要遵守的规则：</p>
+<ol>
+<li> 应用层级的状态应该集中到单个 store 对象中。</li>
+<li> 提交 <strong>mutation</strong> 是更改状态的唯一方法，并且这个过程是同步的。</li>
+<li> 异步逻辑都应该封装到 <strong>action</strong> 里面。</li>
+</ol>
+<p>只要你遵守以上规则，如何组织代码随你便。如果你的 store 文件太大，只需将 action、mutation 和 getter 分割到单独的文件。</p>
+<p>对于大型应用，我们会希望把 Vuex 相关代码分割到模块中。下面是项目结构示例：</p>
+<p>├── index.html</p>
+<p>├── main.js</p>
+<p>├── api</p>
+<p>│   └── … # 抽取出API请求</p>
+<p>├── components</p>
+<p>│   ├── App.vue</p>
+<p>│   └── …</p>
+<p>└── store</p>
+<p>   ├── index.js          # 我们组装模块并导出 store 的地方</p>
+<p>   ├── actions.js        # 根级别的 action</p>
+<p>   ├── mutations.js      # 根级别的 mutation</p>
+<p>   └── modules</p>
+<p>       ├── cart.js       # 购物车模块</p>
+<p>       └── products.js   # 产品模块</p>
+<p>若有收获，就点个赞吧</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/03/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAaxios/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/03/%E4%B9%98%E9%A3%8E%E7%A0%B4%E6%B5%AA%E5%AD%A6%E4%B9%A0Vue(%E4%B8%AD)/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "7ssRPgdL7nR67RaEfj8KwNwN-gzGzoHsz",
+          app_key: "16yi4dam4pxpavUJN3ezR0TM",
+          placeholder: "留下你的骚话",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

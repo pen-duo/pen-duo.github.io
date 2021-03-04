@@ -1,0 +1,745 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="前端,计算机,程序员">
+  <meta name="author" content="PengYiDuo">
+  <meta name="keywords" content="前端,计算机,程序员">
+  <title>Peng的个人博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"pen-duo.github.io","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>pen-duo's space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://static.zkqiang.cn/images/20200307203002.jpg-slim') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="前端改变视界">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/03/%E6%B5%85%E6%9E%90AJAX/"></a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/03/%E6%B5%85%E6%9E%90AJAX/">
+          
+          
+            
+          
+          浅析AJAX一.AJAX的原理  
+============
+
+  Ajax的全称是异步javascript和XML,目前我们一般用JSON代替XML。
+  通俗的理解:在网页中利用XMLHttpRequest对象和服务器进行数据交互的方式,就是Ajax。
+  AJAX 主要用于在不刷新页面的情况下向浏览器发起请求并接受响应，最后局部更新页面。
+  优点是不刷新就可以发起请求并接受响应。
+
+二.A
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-03 18:27" pubdate>
+              2021-03-03
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/03/DOM%E4%BA%8B%E4%BB%B6%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/"></a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/03/DOM%E4%BA%8B%E4%BB%B6%E4%B8%8E%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/">
+          
+          
+            
+          
+          DOM事件与事件委托JS事件流事件流描述的是从页面中接受事件的顺序。
+事件发生时会在元素节点之间按照特定的顺序传播,这个传播过程叫做DOM事件流。
+DOM事件流分为三个过程
+1.捕获阶段
+事件捕获:从DOM的顶层节点逐级向下传播,最终由最具体的元素接受。
+2.当前目标阶段
+3.冒泡阶段
+事件冒泡:最开始由最具体的元素接受,然后逐级向上传播至DOM的顶层节点。
+  
+Documcnt
+Elcmcnt
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-03 18:26" pubdate>
+              2021-03-03
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/03/jQuery%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"></a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/03/jQuery%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/">
+          
+          
+            
+          
+          jQuery学习总结1. jQuery概述javascript库:即library,是一个封装好的特定的集合(包括方法和函数)。从封装一大堆函数的角度理解库,就是在这个库中,封装了很多预先定义好的函数在里面,比如动画animate,hide,show,比如获取元素等。
+简单理解就是:就是为了提高我们的工作效率,摒弃以前苦逼的写原生代码,把用过的函数,方法,放到一个文件里面,想用哪个方法,直接在外边
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-03 18:26" pubdate>
+              2021-03-03
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/03/jQuery%E7%B2%BE%E5%8D%8E%E6%89%80%E5%9C%A8/"></a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/03/jQuery%E7%B2%BE%E5%8D%8E%E6%89%80%E5%9C%A8/">
+          
+          
+            
+          
+          jQuery精华所在在2020年,jquery库虽然可能已经不如几年前那么盛行一时了,但是作为全球使用最广泛的库,它依然用于不可忽视的影响力,在学习jQuery的过程中,我对这门近乎设计至完美的库其中的一些精华和原理做出了一些总结,为了方便以后对于jQuery的使用,我写下了这篇笔记。
+jQuery的精华所在是在于它的设计模式,在jQuery中出现了很多在jQuery出现之前没有的设计思想，比如重
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-03 18:25" pubdate>
+              2021-03-03
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/03/%E5%B0%81%E8%A3%85DOM%E5%BA%93/"></a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/03/%E5%B0%81%E8%A3%85DOM%E5%BA%93/">
+          
+          
+            
+          
+          封装DOM库为了简化原生的复杂的DOM操作,我对DOM的部分增删改查进行了封装,并上传到了我的github上。
+以下是地址:我的DOM库链接.
+若有收获，就点个赞吧
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-03 18:25" pubdate>
+              2021-03-03
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/03/DOM%E8%B7%A8%E7%BA%BF%E7%A8%8B%E6%93%8D%E4%BD%9C/"></a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/03/DOM%E8%B7%A8%E7%BA%BF%E7%A8%8B%E6%93%8D%E4%BD%9C/">
+          
+          
+            
+          
+          DOM跨线程操作1.一个小疑问为什么总是有人会说用DOM来操作元素会使浏览器变得很慢呢?
+浏览器分为渲染引擎和JS引擎,渲染引擎负责HTML和CSS的渲染,JS引擎负责对JS的解释。各线程各司其职
+JS只能操作JS,不能操作页面.
+渲染引擎不能操作JS,只能操作页面.
+那么document.body.appendChild(div)是如何改变页面的呢?
+原因是:
+跨线程通信
+当浏览器发现JS在bo
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-03 18:24" pubdate>
+              2021-03-03
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/03/DOM%E7%BC%96%E7%A8%8B/"></a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/03/DOM%E7%BC%96%E7%A8%8B/">
+          
+          
+            
+          
+          DOM编程1.DOM是什么文档对象模型是W3C组织推荐的处理可扩展标记语言的**标准程序接口**。简单来理解DOM就是一个可以处理文档内容的接口，DOM接口可以改变网页的内容,结构和样式。
+2.DOM树  
+艾档
+根元索：
+chtml&gt;
+元索：
+元素：
+
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-03 18:24" pubdate>
+              2021-03-03
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/03/JS%E5%8E%9F%E5%9E%8B%E4%B8%89%E5%A4%A7%E5%AE%9A%E7%90%86/"></a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/03/JS%E5%8E%9F%E5%9E%8B%E4%B8%89%E5%A4%A7%E5%AE%9A%E7%90%86/">
+          
+          
+            
+          
+          JS原型三大定理1.对象._ proto_ = 其构造函数.prototype
+2.Object.prototype是所有对象的直接或间接原型。
+3.所有的函数都是由Function构造的(包括Array,Obiect,Function).
+若有收获，就点个赞吧
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-03 18:23" pubdate>
+              2021-03-03
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/03/%E5%9F%BA%E6%9C%AC%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B%E5%92%8Cnew%E8%BF%90%E7%AE%97%E7%AC%A6/"></a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/03/%E5%9F%BA%E6%9C%AC%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B%E5%92%8Cnew%E8%BF%90%E7%AE%97%E7%AC%A6/">
+          
+          
+            
+          
+          基本包装类型和new操作符基本包装类型
+  对象 才有 属性和方法 复杂数据类型才有属性和方法
+  为什么 简单数据类型会有属性呢？
+基本包装类型: 就是把简单数据类型 包装成了 复杂数据类型 这样基本数据类型就有了属性和方法。  js中有三种基本包装类型 String,Number,Boolean
+
+var s1 = “some text”; var s2 = s1.substring(2);
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-03 18:23" pubdate>
+              2021-03-03
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/03/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6/"></a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/03/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6/">
+          
+          
+            
+          
+          位运算符二进制运算符
+或,与,否
+|两个位都为0，则结果为0,否则为1
+&amp;两个都为1,则结果为1,否则为0
+~
+异或
+^
+两个位相同,则结果为0,否则为1
+左移右移
+&lt;&lt; 和 &gt;&gt;
+头部补零的右移运算符
+&gt;&gt;&gt;
+使用与运算符判断奇偶
+代码
+偶数 &amp; 1 = 0
+奇数 &amp; 1 = 1
+使用~,&gt;&gt;,&lt;&lt;,&gt
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-03 18:22" pubdate>
+              2021-03-03
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/2/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

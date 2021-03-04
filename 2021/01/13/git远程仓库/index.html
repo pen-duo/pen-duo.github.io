@@ -243,7 +243,7 @@
             
             <div class="markdown-body">
               <h2 id="前言-和我一起开始git远程仓库的学习吧"><a href="#前言-和我一起开始git远程仓库的学习吧" class="headerlink" title="前言:和我一起开始git远程仓库的学习吧"></a>前言:和我一起开始git远程仓库的学习吧</h2><h1 id="git远程仓库"><a href="#git远程仓库" class="headerlink" title="git远程仓库"></a>git远程仓库</h1><h2 id="1-利用ssh-sky方式本地连接远程"><a href="#1-利用ssh-sky方式本地连接远程" class="headerlink" title="1.利用ssh sky方式本地连接远程"></a>1.利用ssh sky方式本地连接远程</h2><hr>
-<h3 id="如果有本地仓库"><a href="#如果有本地仓库" class="headerlink" title="如果有本地仓库:"></a>如果有本地仓库:</h3><p>ssh-keygen -t rsa -b 4096 -C “<a href="mailto:&#121;&#x6f;&#x75;&#x72;&#x5f;&#x65;&#109;&#x61;&#x69;&#x6c;&#64;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;">&#121;&#x6f;&#x75;&#x72;&#x5f;&#x65;&#109;&#x61;&#x69;&#x6c;&#64;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;</a>“(新建项目中有代码直接赋值)<br>一直回车,直到没有提示<br>cat ~/.ssh/id-rsa.pub得到公钥内容,黏贴到github设置中的ssh-key中.(如果成功会出现一段很长的公钥代码)<br>测试:ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#117;&#x62;&#x2e;&#99;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#117;&#x62;&#x2e;&#99;&#x6f;&#109;</a> (如果成功,出现名字以及带success字眼的句子)</p>
+<h3 id="如果有本地仓库"><a href="#如果有本地仓库" class="headerlink" title="如果有本地仓库:"></a>如果有本地仓库:</h3><p>ssh-keygen -t rsa -b 4096 -C “<a href="mailto:&#x79;&#111;&#x75;&#114;&#x5f;&#101;&#x6d;&#97;&#x69;&#x6c;&#x40;&#101;&#x78;&#97;&#109;&#112;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#109;">&#x79;&#111;&#x75;&#114;&#x5f;&#101;&#x6d;&#97;&#x69;&#x6c;&#x40;&#101;&#x78;&#97;&#109;&#112;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#109;</a>“(新建项目中有代码直接赋值)<br>一直回车,直到没有提示<br>cat ~/.ssh/id-rsa.pub得到公钥内容,黏贴到github设置中的ssh-key中.(如果成功会出现一段很长的公钥代码)<br>测试:ssh -T <a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;">&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;</a> (如果成功,出现名字以及带success字眼的句子)</p>
 <h3 id="如果没有本地仓库"><a href="#如果没有本地仓库" class="headerlink" title="如果没有本地仓库"></a>如果没有本地仓库</h3><p>git init<br>git add xxx<br>git commit -v<br>先创建一个本地仓库在进行上述操作。<br>不想上传的文件可以放在.ignore文件中。</p>
 <hr>
 <h2 id="2-上传与下载"><a href="#2-上传与下载" class="headerlink" title="2.上传与下载"></a>2.上传与下载</h2><h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><hr>
@@ -255,7 +255,7 @@
 <hr>
 <h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><hr>
 <p>git clone git@xxxx[目标路径].git<br>如果是不同路径,要写上传的新的ssh key(一机一key)<br>cd 目标路径<br>git add//git commit//[git pull]//git push四连操作</p>
-<p>git clone <a href="mailto:&#103;&#105;&#116;&#x40;&#120;&#x78;&#x78;&#46;&#x67;&#105;&#x74;">&#103;&#105;&#116;&#x40;&#120;&#x78;&#x78;&#46;&#x67;&#105;&#x74;</a> yyy<br>会在本地创建yyy目录<br>cd进yyy目录</p>
+<p>git clone <a href="mailto:&#x67;&#105;&#116;&#x40;&#120;&#x78;&#120;&#x2e;&#x67;&#105;&#116;">&#x67;&#105;&#116;&#x40;&#120;&#x78;&#120;&#x2e;&#x67;&#105;&#116;</a> yyy<br>会在本地创建yyy目录<br>cd进yyy目录</p>
 <p>git clone git@xxxx[目标路径].git .<br>最后一个字符是.,注意有空格<br>不会创建新目录<br>使用当前目录容纳代码和.git<br>当前目录最好是空目录</p>
 <p>如何下载某个分支<br>先下载整个仓库,然后git checkout分支名</p>
 <hr>

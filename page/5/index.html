@@ -1,0 +1,777 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="前端,计算机,程序员">
+  <meta name="author" content="PengYiDuo">
+  <meta name="keywords" content="前端,计算机,程序员">
+  <title>Peng的个人博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"pen-duo.github.io","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>pen-duo's space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://static.zkqiang.cn/images/20200307203002.jpg-slim') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="前端改变视界">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/03/CSS%E5%8A%A8%E7%94%BB/"></a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/03/CSS%E5%8A%A8%E7%94%BB/">
+          
+          
+            
+          
+          CSS动画动画原理定义
+
+  动画由许多静止的画面(帧)组成
+  以一定速度连续播放时
+  肉眼因视觉残象产生错觉
+  误以为是活动的画面
+
+transfrom(变形)CSS**transform**属性允许你旋转，缩放，倾斜或平移给定元素。
+
+  位移translate
+  旋转rotate
+  缩放scale
+  倾斜skew
+
+注意:一般transform的使用都伴随着transition(
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-03 11:23" pubdate>
+              2021-03-03
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/03/CSS%E5%B8%83%E5%B1%80/"></a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/03/CSS%E5%B8%83%E5%B1%80/">
+          
+          
+            
+          
+          CSS布局float布局步骤：
+
+  子元素上加  float:left, 和width
+
+  父元素加上 .clearfix
+
+  父元素加上class: class=”clearfix”
+
+  .clearfix的写法：
+
+
+.clearfix::after {  content:’’; display:block; clear:both; }
+一些经验：
+
+  最后一个子元素不设置width
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-03 11:14" pubdate>
+              2021-03-03
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/15/CSS%E6%96%87%E6%A1%A3%E6%B5%81/">CSS文档流</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/15/CSS%E6%96%87%E6%A1%A3%E6%B5%81/">
+          
+          
+            
+          
+          前言:和我一起开始CSS文档流的学习吧CSS文档流文档流流动方向• inline元素从左到右,一直到最右边才换行• block元素从上到下,每一个都另起一行• inline-block也是从左到右
+宽度• inline宽度为内部inline元素的和,不能用width指定• block宽度为默认自动计算宽度,可用width指定• inline-block宽度结合前两点的特点,可指定宽度。
+高度• i
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-15 11:25" pubdate>
+              2021-01-15
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/15/CSS%E8%AF%AD%E6%B3%95/">CSS语法</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/15/CSS%E8%AF%AD%E6%B3%95/">
+          
+          
+            
+          
+          前言:和我一起开始CSS语法的学习吧CSS语法CSS厉害之处层叠样式表层叠指的是什么?
+
+样式层叠
+可以多次对同一选择器进行层叠
+
+
+选择器层叠
+可以用不同选择器对同一样式进行层叠
+
+
+文件层叠
+可以用多个文件层叠
+
+
+
+太灵活所以导致css的缺点也很明显。
+css在各种浏览器的兼容性推荐网站:https://caniuse.com/?search=grid(csniuse.com)
+学习语言的方
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-15 10:20" pubdate>
+              2021-01-15
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/14/HTML%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/">HTML常用标签</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/14/HTML%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/">
+          
+          
+            
+          
+          前言:今天我们来了解一下HTML的常用标签HTML常用标签1.a标签属性
+
+href
+target
+download(不常使用)
+rel=noopener
+
+href的取值
+
+网址
+https://www.google.com
+http://www.google.com
+//google.com
+
+
+路径
+/a/b/c或./a/b/c
+index.html以及./index.html
+
+
+伪协议
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-14 10:15" pubdate>
+              2021-01-14
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/14/HTML%E5%85%A5%E9%97%A8/">HTML入门</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/14/HTML%E5%85%A5%E9%97%A8/">
+          
+          
+            
+          
+          前言:今天我们继续HTML5的学习HTML是谁发明的1990年左右，Tim Berners-Lee（蒂姆·伯纳斯·李）发明了万维网（亦作“WWW”英文全称为“World Wide Web”），同时发明了HTML、HTTP和URL。李爵士写了第一个浏览器，写了第一个服务器，并且用自己的浏览器访问了自己的服务器。
+HTML起手式写HTML首先应该写什么？我们可以把语言改为中文&lt;html lang
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-14 09:18" pubdate>
+              2021-01-14
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/14/HTML5%E8%AF%AD%E6%B3%95%E6%A6%82%E8%A7%88/">HTML5语法概览</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/14/HTML5%E8%AF%AD%E6%B3%95%E6%A6%82%E8%A7%88/">
+          
+          
+            
+          
+          前言:今天我们正式开始HTML5的学习HTML5语法概览DOCTYPE就是文档类型，这句话就是告诉浏览器：我是HTML, 请按照解析HTML的方式解析我
+内容属性值加引号的规则：
+
+如果是普通字符，可以不用加引号
+如果属性名包含特殊字符，如空格，则要加引号，如&lt;div id=&quot;a c fun&quot;&gt;hello world&lt;/div&gt;
+
+内容例子：&lt;in
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-14 08:11" pubdate>
+              2021-01-14
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/13/git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">git远程仓库</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/13/git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">
+          
+          
+            
+          
+          前言:和我一起开始git远程仓库的学习吧git远程仓库1.利用ssh sky方式本地连接远程
+如果有本地仓库:ssh-keygen -t rsa -b 4096 -C “&#x79;&#111;&#x75;&#114;&#x5f;&#101;&#x6d;&#97;&#x69;&#x6c;&#x40;&#101;&#x78;&#97;&#109;&#112;&#x6c;&#x65;&#x2e;&#9
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-13 16:24" pubdate>
+              2021-01-13
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/13/git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">git本地仓库</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/13/git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">
+          
+          
+            
+          
+          前言:和我一起开始git本地仓库的学习吧git本地仓库1.git是什么git是开启github的钥匙git只是一个命令而已,Bash命令行中有很多命令git可以解决的问题:版本控制。
+2.git config配置git123456git config --global user.name 你的英文名git config --global user.email 你的邮箱git config --gl
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-13 13:12" pubdate>
+              2021-01-13
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/01/13/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/">npm命令行入门</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/01/13/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%85%A5%E9%97%A8/">
+          
+          
+            
+          
+          前言:和我一起开始npm的学习吧npm命令行入门1.查
+pwd 查看当前路径
+ls 查看当前路径的内容
+ls 路径 查看指定路径的内容
+查看文件内容
+cat 路径  全部打印
+head 路径  打印前10行
+设置参数看前14行
+head ./style.css -n 14
+
+
+tail 路径 打印后10行
+less 路径 翻页
+退出less: 按q (q就是quit)
+
+
+
+
+
+2.增
+创建1.t
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-13 10:13" pubdate>
+              2021-01-13
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/4/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

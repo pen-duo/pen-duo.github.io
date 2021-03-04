@@ -1,0 +1,673 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="前端,计算机,程序员">
+  <meta name="author" content="PengYiDuo">
+  <meta name="keywords" content="前端,计算机,程序员">
+  <title>Peng的个人博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"pen-duo.github.io","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>pen-duo's space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://static.zkqiang.cn/images/20190728030406.jpeg-slim') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      PengYiDuo
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-03 18:43" pubdate>
+        2021年3月3日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      36
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <h1 id="乘风破浪学习Vue-中"><a href="#乘风破浪学习Vue-中" class="headerlink" title="乘风破浪学习Vue(中)"></a>乘风破浪学习Vue(中)</h1><h1 id="一-Vue的数据响应式"><a href="#一-Vue的数据响应式" class="headerlink" title="一.Vue的数据响应式"></a>一.Vue的数据响应式</h1><p>首先想要了解Vue的数据响应式,我们得知道什么是Vue的数据响应式。</p>
+<p>解释如下:<strong>数据发生改变的时候，视图会重新渲染，匹配更新为最新的值</strong>。</p>
+<p>那么Vue是如何做到的呢?</p>
+<p>致命三连问</p>
+<p>1、Vue 是怎么知道数据改变？</p>
+<p>2、Vue 在数据改变时，怎么知道通知哪些视图更新？</p>
+<p>3、Vue 在数据改变时，视图怎么知道什么时候更新？</p>
+<p>解决这三个问题的过程中,我们其实就已经Vue的数据响应式有了一定的了解</p>
+<p>当然,工欲善其事必先利其器,要想达到我们的目标,</p>
+<p>我们必须要提前知道一些前置内容。</p>
+<h2 id="1-前置知识"><a href="#1-前置知识" class="headerlink" title="1.前置知识"></a>1.前置知识</h2><h3 id="1-1-前置内容①-Object-defineProperty"><a href="#1-1-前置内容①-Object-defineProperty" class="headerlink" title="1.1 前置内容①: Object.defineProperty"></a>1.1 前置内容①: Object.defineProperty</h3><p>这个方法，是 Vue 响应式系统的精髓，骨髓，脑髓</p>
+<p>使用 Object.defineProperty 可以为对象中的每一个属性，设置 get 和 set 方法</p>
+<p>Object.defineProperty 可以为属性设置很多特性，例如 configurable，enumerable，但是现在不过多解释，重点只放在 get 和 set</p>
+<p><strong>那么 get 和 set 方法有什么用？</strong></p>
+<p>get 值是一个函数，当属性被访问时，会触发 get 函数</p>
+<p>set 值同样是一个函数，当属性被赋值时，会触发 set 函数</p>
+<p>举个例子:</p>
+<p>var obj={  name:”彭一多” } Object.defineProperty(obj,”name”,{  get(){ console.log(“get 被触发”) }, set(val){ console.log(“set 被触发”) } })</p>
+<p>当我访问 obj.name 时，会打印 ‘ get 被触发 ‘</p>
+<p>当我为 obj.name 赋值时，obj.name = 5，会打印 ‘ set 被触发 ‘</p>
+<p>这便可以回答了我开篇的第一个问题</p>
+<p>Vue 是怎么知道数据改变的呢？</p>
+<p>恩，Vue 在 属性的 set 方法中做了手脚，因而当数据改变时，触发 属性的 set 方法，Vue 就能知道数据有改变。</p>
+<h3 id="1-2-前置内容②-依赖收集"><a href="#1-2-前置内容②-依赖收集" class="headerlink" title="1.2 前置内容②:依赖收集"></a>1.2 前置内容②:依赖收集</h3><p>简单地说</p>
+<p>data 中的声明的每个属性，都拥有一个数组，保存着 谁依赖（使用）了 它</p>
+<p>举个例子</p>
+<p>然后 页面A 引用了name</p>
+<p>此时，name 把 页面 A 存在它的后宫中（这个页面依赖我）</p>
+<p><strong>为什么呢？</strong></p>
+<p>因为它知道谁依赖它之后，它就可以在发生改变的时候，通知 依赖它的页面，从而让页面完成更新</p>
+<p><strong>注意</strong></p>
+<p>实际上，会依赖 name 的地方，不只是页面，还会有 computed，watch…. 等等，但是这里我们全部使用页面一词替代。</p>
+<p>这就是依赖收集，把 依赖了我（使用了我的东西），统统保存起来。</p>
+<p>我按上面的例子，从Vue 内部打印一份数据供大家简单了解即可。</p>
+<p> <img src="https://cdn.nlark.com/yuque/0/2021/jpeg/1554318/1610026549393-f11c9ca4-b259-43ad-84e3-cc2507179268.jpeg" srcset="/img/loading.gif"> </p>
+<p>可以看到，name 属性，使用了 一个 dep 保存了 页面A 这个依赖，而保存的实际上是 页面A的 Watcher。</p>
+<p><strong>TIP</strong></p>
+<p>简单说一下，watcher 是什么，每个 Vue 实例都会拥有一个专属的 watcher，可用于实例更新</p>
+<p><strong>总结一下</strong></p>
+<p>1、data 中每个声明的属性，都会有一个 专属的依赖收集器 subs</p>
+<p>2、当页面使用到 某个属性时，页面的 watcher 就会被 放到 依赖收集器 subs 中</p>
+<p>数据 是在什么时候进行 收集依赖 的呢？</p>
+<p>答案是，<strong>ObjectdefineProperty - get</strong></p>
+<p>当 页面 A 读取了 name 时，会触发 name 的 get 函数，此时，name 就会保存 页面A 的 watcher 啦！</p>
+<p>这便可以回答了我开篇的第二个问题</p>
+<p>Vue 在数据改变时，怎么知道通知哪些视图更新？</p>
+<p>恩，通知那些存在 依赖收集器中的 视图</p>
+<h3 id="1-3-前置内容③-依然更新"><a href="#1-3-前置内容③-依然更新" class="headerlink" title="1.3 前置内容③:依然更新"></a>1.3 前置内容③:依然更新</h3><p>依赖更新，就是，通知所有的依赖进行更新</p>
+<p>经过上面的讲解，我们都知道，每个属性都会保存有一个 依赖收集器 subs</p>
+<p>而这个 依赖收集器，是用来在 数据变化时，通知更新的</p>
+<p>数据 是在 什么时候进行 依赖更新 的呢？</p>
+<p>答案是，<strong>Object.defineProperty - set</strong></p>
+<p>以上面的 Vue 实例 为例</p>
+<p>当 name 改变的时候，name 会遍历自己的 依赖收集器 subs，逐个通知 watcher，让 watcher 完成更新</p>
+<p>这里 name 会通知 页面A，页面A 重新读取新的 name ，然后完成渲染</p>
+<p>这便可以回答了我开篇的第二个问题</p>
+<p>Vue 在数据改变时，视图怎么知道什么时候更新?</p>
+<p>恩，在数据变化触发 set 函数时，通知视图，视图开始更新</p>
+<p><strong>简单**</strong>总结**</p>
+<p>1、Object.defineProperty  -  get ，用于 依赖收集</p>
+<p>2、Object.defineProperty  -  set，用于 依赖更新</p>
+<p>3、每个 data 声明的属性，都拥有一个的专属依赖收集器 subs</p>
+<p>4、依赖收集器 subs 保存的依赖是 watcher</p>
+<p>5、watcher 可用于 进行视图更新</p>
+<h2 id="2-面试该如何回答"><a href="#2-面试该如何回答" class="headerlink" title="2.面试该如何回答"></a>2.面试该如何回答</h2><p>上文只是对Vue数据响应做了白话文解释。</p>
+<p>更为专业的解释:Vue为MVVM框架，当数据模型data变化时，页面视图会得到响应更新，其原理对data的getter/setter方法进行拦截（Object.defineProperty或者Proxy），利用发布订阅的设计模式，在getter方法中进行订阅，在setter方法中发布通知，让所有订阅者完成响应。</p>
+<p><strong>原理</strong></p>
+<p>在响应式系统中，Vue会为数据模型data的每一个属性新建一个订阅中心作为发布者，而监听器watch、计算属性computed、视图渲染template/render三个角色同时作为订阅者，对于监听器watch，会直接订阅观察监听的属性，对于计算属性computed和视图渲染template/render，如果内部执行获取了data的某个属性，就会执行该属性的getter方法，然后自动完成对该属性的订阅，当属性被修改时，就会执行该属性的setter方法，从而完成该属性的发布通知，通知所有订阅者进行更新。</p>
+<h2 id="3-一个例子"><a href="#3-一个例子" class="headerlink" title="3.一个例子"></a>3.一个例子</h2><p>还是上面那个例子,data中的name就是一个订阅中心,name是一个发布者,当我们在页面A中使用name时,页面A就作为一个订阅者订阅了name属性,当name发生改变时,页面A就必须相应的发生改变。</p>
+<h1 id="二-Vue的两个版本"><a href="#二-Vue的两个版本" class="headerlink" title="二.Vue的两个版本"></a>二.Vue的两个版本</h1><h2 id="1-Vue的两个版本"><a href="#1-Vue的两个版本" class="headerlink" title="1.Vue的两个版本"></a>1.Vue的两个版本</h2><p>Vue有两个版本，分别是完整版和非完整版，</p>
+<h3 id="1-1-完整版"><a href="#1-1-完整版" class="headerlink" title="1.1 完整版"></a>1.1 完整版</h3><p>完整版同时包括编译器(compiler) 和 运行时(runtime)</p>
+<p>Vue程序运行过程包括</p>
+<p>template–(parse解析)–&gt;ast(抽象语法树)–(编译)–&gt;render(functions)–&gt;virtual Dom–&gt;UI</p>
+<h3 id="1-2-只包含运行时版"><a href="#1-2-只包含运行时版" class="headerlink" title="1.2 只包含运行时版"></a>1.2 只包含运行时版</h3><p>只包含运行时版就只有运行时，没有编译器</p>
+<p>Vue程序运行过程包括</p>
+<p>render(functions)–&gt;virtual Dom–&gt;UI</p>
+<p>可以看出 运行时版比完整版省略了前面两步,所以效率更高,代码更少</p>
+<p><strong>前面的template到render函数真的被省略了吗,不是的,而是vue-template-compiler帮我们做了这个事</strong></p>
+<h2 id="2-两个版本的区别"><a href="#2-两个版本的区别" class="headerlink" title="2.两个版本的区别"></a>2.两个版本的区别</h2><p>Vue完整版</p>
+<p>Vue只包含运行时版</p>
+<p>特点</p>
+<p>有compiler</p>
+<p>没有compiler</p>
+<p>视图</p>
+<p>写在HTML里，或者写在template选项里</p>
+<p>写在render函数里，用h创建标签</p>
+<p>cdn引入</p>
+<p>vue.js</p>
+<p>vue.runtime.js</p>
+<p>webpack引入</p>
+<p>需要配置alias</p>
+<p>默认使用</p>
+<p>vue@cli引入</p>
+<p>需要额外配置</p>
+<p>默认使用</p>
+<p>那究竟应该使用哪一个版本呢？</p>
+<p>最佳实践是使用 非完整版，然后用vue-loader引入compiler</p>
+<p>整个流程思路如下：</p>
+<ol>
+<li> 对于用户来说，非完整版 （即runtime版）体积小，用户体验好，但只支持h函数</li>
+<li> 对于程序员来说，只能写h函数的话，开发体验不好，如果有compiler, 开发者就能写更直观更语义化的HTML标签和template, 所以我们需要一个compiler</li>
+<li> vue-loader就可以引入compiler, 把vue文件里的HTML标签和template 会在构建时预编译成 h函数，这样用户和开发者都高兴</li>
+</ol>
+<h1 id="三、template-和-render-的用法"><a href="#三、template-和-render-的用法" class="headerlink" title="三、template 和 render 的用法"></a>三、template 和 render 的用法</h1><p>template标签和JS里的template</p>
+<p>render函数：</p>
+<h1 id="四、快速在线上手Vue的神器"><a href="#四、快速在线上手Vue的神器" class="headerlink" title="四、快速在线上手Vue的神器"></a>四、快速在线上手Vue的神器</h1><p>我们可以在codesandbox里在线写Vue的代码，不用任何本地的安装依赖</p>
+<p><a target="_blank" rel="noopener" href="https://codesandbox.io/s/boring-sanderson-7ozng?file=/src/main.js">https://codesandbox.io/s/boring-sanderson-7ozng?file=/src/main.js</a></p>
+<p> <img src="https://cdn.nlark.com/yuque/0/2020/png/540849/1593700793139-55acd1d9-e953-459a-960a-25891c80d0e4.png?x-oss-process=image/resize,w_1492" srcset="/img/loading.gif"> </p>
+<h1 id="五-computed与watch的区别"><a href="#五-computed与watch的区别" class="headerlink" title="五.computed与watch的区别"></a>五.computed与watch的区别</h1><h3 id="计算属性computed"><a href="#计算属性computed" class="headerlink" title="计算属性computed"></a>计算属性computed</h3><ul>
+<li>  computed不加括号</li>
+<li>  支持缓存，若依赖的属性没有变化，就不会进行重新计算。</li>
+<li>  不支持异步，当computed内有异步操作时无效，无法监听数据的变化</li>
+<li>  如果一个属性是由其他属性计算而来的，这个属性依赖其他属性，是一个多对一或者一对一，一般用computed</li>
+<li>  如果computed属性属性值是函数，那么默认会走get方法；函数的返回值就是属性的属性值；在computed中的，属性都有一个get和一个set方法，当数据变化时，调用set方法。</li>
+</ul>
+<h3 id="侦听属性watch"><a href="#侦听属性watch" class="headerlink" title="侦听属性watch"></a>侦听属性watch</h3><ul>
+<li>  不支持缓存，数据变，直接会触发相应的操作</li>
+<li>  watch支持异步；监听的函数接收两个参数，第一个参数是最新的值；第二个参数是输入之前的值；</li>
+<li>  当一个属性发生变化时，需要执行对应的操作；一对多；</li>
+<li>  监听数据必须是data中声明过或者父组件传递过来的props中的数据，当数据变化时，触发其他操作，函数有两个参数：</li>
+</ul>
+<p>immediate: watch默认在数据从无到有的过程是不进行监听的，如果需要监听这个过程，可将immediate设置为true；</p>
+<p>deep: deep的意思就是深入观察，监听器会一层层的往下遍历，给对象的所有属性都加上这个监听器，但是这样性能开销就会非常大了，任何修改obj里面任何一个属性都会触发这个监听器里的 handler</p>
+<p>需要注意的是watch内部函数不可使用箭头函数，因为箭头函数本身无this，会继承window，导致箭头函数的this指向window，并非是Vue实例。</p>
+<h3 id="综上所述"><a href="#综上所述" class="headerlink" title="综上所述"></a>综上所述</h3><ul>
+<li>  computed在数据进行复杂运算的时候会简化代码</li>
+<li>  watch监听数据变化的时候可以进行操作</li>
+</ul>
+<h1 id="六-Vue进阶构造属性"><a href="#六-Vue进阶构造属性" class="headerlink" title="六. Vue进阶构造属性"></a>六. Vue进阶构造属性</h1><h2 id="1-directive指令"><a href="#1-directive指令" class="headerlink" title="1.directive指令"></a>1.directive指令</h2><p>全局只用Vue.directive(“x”,{…})</p>
+<p>局部使用options.directive</p>
+<p>作用是减少DOM操作相关重复代码</p>
+<h2 id="2-mixins-混入"><a href="#2-mixins-混入" class="headerlink" title="2.mixins 混入"></a>2.mixins 混入</h2><p>全局用Vue.mixin({…})</p>
+<p>局部使用options.mixins:[mixin1,mixin2]</p>
+<p>作用是减少options里的重复</p>
+<h2 id="3-extends-继承-扩展"><a href="#3-extends-继承-扩展" class="headerlink" title="3.extends 继承/扩展"></a>3.extends 继承/扩展</h2><p>全局用VUe.extends({…})</p>
+<p>局部用options.extend:{…}</p>
+<p>作用跟mixins差不多,只是形式不同</p>
+<h2 id="4-provide-inject-提供和注入"><a href="#4-provide-inject-提供和注入" class="headerlink" title="4.provide/inject 提供和注入"></a>4.provide/inject 提供和注入</h2><p>祖先提供东西,后代注入东西</p>
+<p>作用是大范围,隔N代共享信息</p>
+<h1 id="七-vue-cli简介"><a href="#七-vue-cli简介" class="headerlink" title="七.vue/cli简介"></a>七.vue/cli简介</h1><p>ClI是Command-Line Interface,翻译为命令行界面,但是俗称<strong>脚手架</strong>。</p>
+<p>Vue Cli是一个官方发布的vue.js项目脚手架</p>
+<p>使用vue-cli可以快速搭建Vue开发环境以及对应的webpack配置。</p>
+<p>当我们在开发大型项目时,那么我们需要,并且必然需要使用Vue CLI</p>
+<ul>
+<li>  使用Vue.js开发大型应用时,我们需要考虑代码目录结构,项目结构和部署,热加载,代码单元测试等事情。</li>
+<li>  如果每个项目都要手动完成这些工作,那无疑效率比较低效,所以通常我们会使用一些脚手架工具来帮助完成这些事情。</li>
+</ul>
+<h2 id="1-vue-cli安装"><a href="#1-vue-cli安装" class="headerlink" title="1.vue/cli安装"></a>1.vue/cli安装</h2><p>在安装vue/cli前,我们需要安装</p>
+<p>nodejs(8.9以上版本),npm,webpack</p>
+<p>cnpm更换镜像</p>
+<p>1.安装vue/cli(默认安装 vue/cli3)</p>
+<p>2.自由选择vue/cli版本</p>
+<h2 id="2-vue-cli-2相关"><a href="#2-vue-cli-2相关" class="headerlink" title="2.vue/cli 2相关"></a>2.vue/cli 2相关</h2><p>vue2 构建项目</p>
+<p>初始化项目时配置选项详解</p>
+<p> <img src="https://cdn.nlark.com/yuque/0/2021/png/1554318/1610202734888-3abf2ef4-1873-4782-8fda-911a25011f6a.png?x-oss-process=image/resize,w_1110" srcset="/img/loading.gif" alt="Snipaste_2021-01-09_22-28-50.png" title="Snipaste_2021-01-09_22-28-50.png"> </p>
+<p>1.会根谎这个名称创建一个文件夹,存放之后项目的内容</p>
+<p>该名称也会作为默认的项目名称,但是不能包含大写字母算</p>
+<p>2项且名杨,不旋包含大写</p>
+<p>[bogon:yuexmgsvueInitwebpackyvejsproject</p>
+<p>6.ESLIn检测代码规范,看自己的情况</p>
+<p>3.作者的信息,会默认从at中读取信息</p>
+<p>L7Projectnanedyvuejsproject</p>
+<p>7.单元测试</p>
+<p>L7ProjectdescriptionAVuejsorojcct</p>
+<p>果些公司强制雯求写单元测试</p>
+<p>Authorcoderhy3726233269qq.com</p>
+<p>4.后面详纽介绍</p>
+<p>Vuebuiudruntime</p>
+<p>InstaliVUe-router’No</p>
+<p>USEESLINTTOLINTYOURcODEYNO</p>
+<p>5.vue-router,这里我选择/o,后碗自己安装</p>
+<p>SOTUPUNITTESTsNo</p>
+<p>SetupezetestsnithNightwatch?No</p>
+<p>houdWrunopInstattoryouottcrtheprojccthobeencratco</p>
+<p>ended)(Usearrow</p>
+<p>modebycodenwhy</p>
+<p>Yes,UseNPH</p>
+<p>微博:coderwhy</p>
+<p>Yes,UseYarn</p>
+<p>No,IMiLLHandLEthatayselr</p>
+<p>B.2e测试Cndtocnd</p>
+<p>安装Nightwatch,是一个利用selenlum或</p>
+<p>weBdriver或phantomis等进行自动化测试的框架</p>
+<p>9.择用yam或者npm安装都可以</p>
+<h2 id="3-vue-cli-3相关"><a href="#3-vue-cli-3相关" class="headerlink" title="3.vue/cli 3相关"></a>3.vue/cli 3相关</h2><p>1.安装vue/cli(默认安装 vue/cli3)</p>
+<p>2.自由选择vue/cli版本</p>
+<p>vue3 构建项目</p>
+<h2 id="4-vue-cli3与2版本的区别"><a href="#4-vue-cli3与2版本的区别" class="headerlink" title="4.vue-cli3与2版本的区别"></a>4.vue-cli3与2版本的区别</h2><ul>
+<li>  vue-cli 3是基于webpack 4打造,vue-cli还是webpack3</li>
+<li>  vue-cli3的设计原则是”0配置”,移除的配置文件根目录下的,build和config等目录</li>
+<li>  vue-cli 3提供了vue ui 命令,提供了可视化配置,更加人性化</li>
+<li>  移除了static文件夹,新增了public文件夹,并且index.html移动到了public中</li>
+</ul>
+<p>若有收获，就点个赞吧</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/03/%E4%B9%98%E9%A3%8E%E7%A0%B4%E6%B5%AA%E5%AD%A6%E4%B9%A0Vue(%E4%B8%8B)/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/03/%E4%B9%98%E9%A3%8E%E7%A0%B4%E6%B5%AA%E5%AD%A6%E4%B9%A0Vue(%E4%B8%8A)/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "7ssRPgdL7nR67RaEfj8KwNwN-gzGzoHsz",
+          app_key: "16yi4dam4pxpavUJN3ezR0TM",
+          placeholder: "留下你的骚话",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

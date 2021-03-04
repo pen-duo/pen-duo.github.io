@@ -1,0 +1,697 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="前端,计算机,程序员">
+  <meta name="author" content="PengYiDuo">
+  <meta name="keywords" content="前端,计算机,程序员">
+  <title>Peng的个人博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"pen-duo.github.io","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>pen-duo's space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://static.zkqiang.cn/images/20190728030406.jpeg-slim') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      PengYiDuo
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-03 18:45" pubdate>
+        2021年3月3日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      43
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <h1 id="Vue3造轮子笔记"><a href="#Vue3造轮子笔记" class="headerlink" title="Vue3造轮子笔记"></a>Vue3造轮子笔记</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这段时间学习vue3造轮子，颇有心得，写一篇文章对整个造轮子的过程进行一个总结（PS：目前造的只是一个很小的ui框架，后续会慢慢的扩充轮子的数量并增加目前轮子的特性）</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li>  使用vite搭建官网</li>
+<li>  制作switch组件</li>
+<li>  制作button组件</li>
+<li>  制作dialog组件</li>
+<li>  制作tabs组件</li>
+<li>  装修自己的官网</li>
+<li>  代码构建与发布</li>
+</ul>
+<h2 id="使用vite搭建官网"><a href="#使用vite搭建官网" class="headerlink" title="使用vite搭建官网"></a>使用vite搭建官网</h2><p>vite是vue3中的新的web开发构建工具，由于其原生ES模块的导入方式，可以实现闪电般的冷服务器启动。（体验过后不要太快，瞬间构建完成一个项目，瞬间启动）</p>
+<ul>
+<li>  全局安装create-vite-app</li>
+</ul>
+<p>yarn global add <a href="mailto:&#x63;&#x72;&#x65;&#97;&#116;&#101;&#45;&#118;&#x69;&#116;&#101;&#x2d;&#x61;&#x70;&#x70;&#64;&#49;&#46;&#49;&#x38;&#x2e;&#48;">&#x63;&#x72;&#x65;&#97;&#116;&#101;&#45;&#118;&#x69;&#116;&#101;&#x2d;&#x61;&#x70;&#x70;&#64;&#49;&#46;&#49;&#x38;&#x2e;&#48;</a></p>
+<ul>
+<li>  创建项目目录</li>
+</ul>
+<p>cva migu-ui 或者 create-vite-app migu-ui</p>
+<p>这样就构建好了一个vue3项目</p>
+<p>简单说一下vue2和vue3的区别</p>
+<p>90%的写法完全一致，除了以下几点</p>
+<ol>
+<li> vue3的template支持多个根标签，vue2不支持</li>
+<li> 创建Vue实例vue3用的是createApp(),而vue2使用的new Vue()</li>
+<li> createApp(组件)，new Vue({template,render})</li>
+</ol>
+<h2 id="新建组件与vue-router"><a href="#新建组件与vue-router" class="headerlink" title="新建组件与vue-router"></a>新建组件与vue-router</h2><p>由于这次我们使用的是typescript进行整个项目的编写，所以router是ts文件，在引入.vue文件时会报错</p>
+<p>因为ts只能理解ts文件，无法理解.vue文件</p>
+<p>我们需要创建一个shim-vue.d.ts来解决这个问题，然后ts文件就不报错了</p>
+<p>declare module ‘*.vue’{  import {ComponentOptions} from ‘vue’ const componentOptions:ComponentOptions export default componentOptions }</p>
+<p>qn-ui采用的history模式的路由，整个路由的创建过程比较常规，就不赘述了</p>
+<p>我这里只说明一下项目中vue3使用到的内容</p>
+<p>需求:我们需要控制菜单栏的显示隐藏,即图中内容,在手机页面是可以控制显示隐藏的</p>
+<p> <img src="https://cdn.nlark.com/yuque/0/2021/png/1554318/1612252795557-08b7f375-0912-4604-9f64-5c93120c7eba.png" srcset="/img/loading.gif" alt="Snipaste_2021-02-02_15-59-49.png" title="Snipaste_2021-02-02_15-59-49.png"> </p>
+<p>组件列表</p>
+<p>Switch组件</p>
+<p>Button组件</p>
+<p>Dialog组件</p>
+<p>Tabs组件</p>
+<h2 id="使用provide和inject控制边栏显隐"><a href="#使用provide和inject控制边栏显隐" class="headerlink" title="使用provide和inject控制边栏显隐"></a>使用provide和inject控制边栏显隐</h2><p>1.首先在app中定义一个menuVisible，使用provide进行数据的共享</p>
+<p>语法setup()和data,methods等平级,setup是vue3新特性,我们可以使用setup来取代vue2中的data,methods,生命周期等。</p>
+<p>ref也属于vue新特性,用来将基础响应类型转响应式,在项目中,使用ref来定义一个bool类型的数据menuVisible，使用provide来将这个数据共享到子组件中。</p>
+<p>2.然后我们在topnav组件，也就是顶部标签组件中拿到这个menuVisible，并提供一个函数，用来控制menuVisible变化</p>
+<p>你看，setup已经完成了data和methods的工作了</p>
+<p>3.然后我们在边栏中拿到menuVisible，通过v-if控制显隐</p>
+<p>需要注意的是，setup函数需要将定义的内部函数，变量都return出来，要不然无法使用</p>
+<p>4.解决在pc端,菜单栏隐藏的bug</p>
+<p>按理说,上面的控制菜单栏显示隐藏的功能我们只需要在手机端实现即可,因此在pc端我们可以将menuVisible一致设置为true。</p>
+<p>在provide变量menuVisible之前先判断一下屏幕宽度。</p>
+<p>5.当在手机端菜单栏进行切换时,隐藏菜单栏。</p>
+<p>afterEach函数会在切换路由时执行。</p>
+<p>所以我们在切换菜单选项时只需要判断屏幕宽度,如果为手机端,则将menuVisible设置为true</p>
+<h2 id="Switch组件的实现"><a href="#Switch组件的实现" class="headerlink" title="Switch组件的实现"></a>Switch组件的实现</h2><p>我们要造一个轮子，首先要明白需求，然后确定这个轮子中需要哪些值，哪些属性，最后再是写代码实现轮子</p>
+<p>第一步：什么是switch组件，如图</p>
+<p> <img src="https://cdn.nlark.com/yuque/0/2021/gif/1554318/1612253399651-817175f1-b91b-450b-84ae-d0662afd35b0.gif" srcset="/img/loading.gif"> </p>
+<p>可以控制是和否的组件</p>
+<p>第二步：switch组件怎么用？</p>
+<p>switch最基本的功能就是控制是否嘛，所以肯定要传一个value（bool），除此之外，我们还可以控制switch组件的大小，是否禁用等等</p>
+<p>第三步：写代码</p>
+<p>switch组件的样式很好实现，html结构，一个button里面一个span（小圆球）</p>
+<p>然后通过两种不同的样式来控制是否状态的switch，加上过渡效果，就实现啦</p>
+<p>关于数据的传输，外部组件需要传一个bool类型的value进来</p>
+<p>然后我们在点击事件中，需要将这个值取反然后回传给父组件（注意：这里子组件一定不能去修改这个值，要将数据回传回去）。setup中接收两个参数，props和context，通过context.emit通知父组件去更新这个value。（与vue2中的this.$emit不同）</p>
+<p>父组件中获取事件，并将value的值改变</p>
+<p>可以简写为</p>
+<p>这个组件中最核心的知识点：不准改props，使用：value和@input实现父子组件交流</p>
+<h2 id="Button组件的实现"><a href="#Button组件的实现" class="headerlink" title="Button组件的实现"></a>Button组件的实现</h2><h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>(搞清楚我们需要做出什么东西来)</p>
+<p>需求</p>
+<ul>
+<li>  可以有不同的等级(level)</li>
+<li>  可以是链接,可以是文字</li>
+<li>  可以click,focus,鼠标悬浮</li>
+<li>  可以改变size:大中小</li>
+<li>  可以禁用(disabled)</li>
+<li>  可以加载中(loading)</li>
+</ul>
+<h3 id="API设计"><a href="#API设计" class="headerlink" title="API设计"></a>API设计</h3><p>Button组件怎么用</p>
+<p>实现一:让Button支持事件click,focus,mouseover</p>
+<p>前置知识:</p>
+<h3 id="Vue3属性绑定"><a href="#Vue3属性绑定" class="headerlink" title="*Vue3属性绑定"></a>*Vue3属性绑定</h3><ul>
+<li>  组件上绑定的事件默认会传给最外层的元素。</li>
+<li>  使用inhertAttrs:false 可以取消默认绑定</li>
+<li>  利用attrs或者context.$attrs可以获取所有属性</li>
+<li>  可以利用v-bind=”$attrs”批量绑定属性</li>
+<li>  使用const {size,level,…rest}  =  context.$attrs将属性分开</li>
+</ul>
+<p>示例:假设有两个组件分别叫做Father和Son，Son是Father的子组件</p>
+<p>这里是Father组件内部部分代码</p>
+<p>这里是Son组件内部部分代码</p>
+<p>上面click事件默认会绑定到div上,这时无论是点击button还是div都会打印出”你好”来。</p>
+<p>但是,如果我们设置<strong>inhertAttrs:false</strong>时,所有在Son绑定的属性都不会被继承。此时无论点击div还是buttong都不会打印”你好”。</p>
+<p>如果我们此时想将所有从外界传来的无论属性还是事件都绑定到button上该怎么办呢？</p>
+<p>答案是在button上加上<code>v-bind=&quot;$attrs&quot;</code></p>
+<p>attrs就是从<Son>组件上传的所有属性(包括事件)。</p>
+<p>如果这个时候我们想给son组件的div添加focus事件同时给button添加click该如何是好呢？</p>
+<p>答案是将传过来的属性分开,代码如下</p>
+<p>依旧是Son组件内部代码</p>
+<p>这样我们就将传过来的属性分离,然后分别绑定到想要绑定的元素身上就好了。</p>
+<h3 id="props与attrs的区别"><a href="#props与attrs的区别" class="headerlink" title="*props与attrs的区别"></a>*props与attrs的区别</h3><p>同样是获取属性的方法,props与attrs有什么区别呢?</p>
+<ul>
+<li>  props要先声明才能取值,attrs不同先声明</li>
+<li>  props不包括事件,attrs包括</li>
+<li>  props没有声明的属性,会跑到attrs里</li>
+<li>  props支持string以外的类型,attrs只有string类型</li>
+</ul>
+<p>上面都是我们的前置知识,知道这些前置知识才能帮助我们刚好的封装组件,接下来,我们开始做业务逻辑相关的东西。</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>由于我们封装的是一个面向大众的ui库,所以在封装前,我们得站在用户的角度思考如何封装,在我看来,我们提供一个接口,用户只需要,知道怎么去用ok了。</p>
+<p>关于button主题有三种:分别是默认按钮,链接按钮,文本按钮</p>
+<p>以下是对应的使用方法</p>
+<p>button大小有三种:分别是大号按钮,中号按钮,小号按钮</p>
+<p>以下是对应的使用方法</p>
+<p>button种类有三种:分别是主要按钮,普通按钮,危险按钮</p>
+<p>通过props接收父组件传来的大小，是否加载等属性</p>
+<p>然后通过计算属性来动态的改变button的类名，计算属性也写在setup中</p>
+<p>这里关于css需要提醒的是：最小css原则</p>
+<p>组件中的元素的样式是基于一个默认样式的</p>
+<p>但是用户使用我们组件的时候，用户不一定有这样的样式。</p>
+<p>所以我们创建一个scss文件，用来将我们组件的样式进行一个默认的改动</p>
+<p>所有以qngu开头的都是我们的组件</p>
+<h2 id="Dialog组件的实现"><a href="#Dialog组件的实现" class="headerlink" title="Dialog组件的实现"></a>Dialog组件的实现</h2><h3 id="需求分析-1"><a href="#需求分析-1" class="headerlink" title="需求分析"></a>需求分析</h3><p>参考antD,Bulma,Element,iView,Vuetify等</p>
+<p>需求</p>
+<ul>
+<li>  点击后弹出</li>
+<li>  有遮罩层overlay</li>
+<li>  有close按钮</li>
+<li>  有标题</li>
+<li>  有内容</li>
+<li>  有yes/no内容</li>
+</ul>
+<h3 id="API设计-1"><a href="#API设计-1" class="headerlink" title="API设计"></a>API设计</h3><h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3><p>第一个功能,点击toggle按钮,弹出遮罩层以及对话框,用一个visible来控制对话框的显示与隐藏。</p>
+<p>这里我们只能实现对话框的显示。</p>
+<p>第二个功能,点击x按钮,关闭对话框。</p>
+<p>我们在点击事件中，需要将Dialog上传来的x取反然后回传给父组件（注意：这里子组件一定不能去修改这个值，要将数据回传回去）。setup中接收两个参数，props和context，通过context.emit通知父组件去更新这个value。（与vue2中的this.$emit不同）</p>
+<p>由于子组件中直接不能修改父组件传过来的值,所以我们只能在子组件中通知父组件,向父组件发射一个事件要求父组件修改。由此引出上面的三部曲:父组件传参,子组件发出时间通知父组件修改参数,父组件执行事件。</p>
+<p>可以简写为</p>
+<p>第三个功能，点击遮罩层，关闭，我们需要判断有些对话框是否需要点击遮罩层关闭</p>
+<p>传一个closeOnClickOverlay属性</p>
+<p>遮罩层绑定OnClickOverlay事件</p>
+<p>第三个功能，点击ok或者cancel关闭，这里需要注意，有时候表单没有填写完毕，我们是不允许ok的，这个判断需要由父组件传来，一个ok对应f1，一个cancel对应f2</p>
+<p>子组件接收ok或者cancel，如果父组件返回的是true就可以关闭，false就不能关闭</p>
+<p>第四个功能，dialog支持自定义内容</p>
+<p>使用具名插槽</p>
+<p>1.在父组件的dialog标签里面加上两个具名插槽，名字为content和name</p>
+<p>注意vue3中具名插槽的用法与vue2中的不太一样</p>
+<p>具名插槽vue2与vue3的区别</p>
+<p>2.子组件通过name找到这个插槽里面对应的内容</p>
+<p>第五个功能，如果有一个div，层级为2，而你的dialog层级为1，这样你的对话框就会被遮挡</p>
+<p>使用teleport，无需导入，是vue3的新组件，将我们的内容用teleport包裹，然后放到body下面</p>
+<p>第六个功能，我们在父组件不给dialog传参，使用一个函数，能够传递所有的值到dialog组件中</p>
+<p>首先声明一个showDialog的事件，然后声明一个openDialog的函数</p>
+<p> <img src="https://cdn.nlark.com/yuque/0/2021/png/1554318/1612354599240-c47ea2a2-9d20-4d4f-b87c-4cc5ffc8ee49.png" srcset="/img/loading.gif" alt="1.png" title="1.png"> </p>
+<p>标题</p>
+<p>你好</p>
+<p>OK</p>
+<p>Cancel</p>
+<p>openDialog支持我们目前所创建的所有参数，标题，内容，点击ok之后的返回事件，点击取消之后的返回事件</p>
+<p>我们创建一个ts文件用来定义这个函数，这个函数首先会创建一个div，然后我们的dialog挂载到这个div上</p>
+<p>对于传入的参数，我们用h函数来进行渲染，我们先将visible属性变为true，这样对话框就出来了，然后对话框中包含一个onUpdate:visible函数，这是我们点击叉号关闭事件需要引用的，如果接受的update:visible值为false，我们就关闭对话框、以及ok和cancel函数</p>
+<h2 id="Tabs组件的实现"><a href="#Tabs组件的实现" class="headerlink" title="Tabs组件的实现"></a>Tabs组件的实现</h2><h3 id="需求设计"><a href="#需求设计" class="headerlink" title="需求设计"></a>需求设计</h3><p>参考antD,Bulma,Element,iView,Vuetify等</p>
+<p>需求</p>
+<ul>
+<li>  点击Tab切换内容</li>
+<li>  有一条横线在动</li>
+</ul>
+<h3 id="API设计-2"><a href="#API设计-2" class="headerlink" title="API设计"></a>API设计</h3><p>Tabs组件怎么用</p>
+<h3 id="实现-2"><a href="#实现-2" class="headerlink" title="实现"></a>实现</h3><p>问题1：如何确认tab的类型，如果我往tabs里面传的是一个div，那不就翻皮水了</p>
+<p>我们需要检查tabs中的标签类型</p>
+<p>通过log调试大法，最后我们找到了tabs里面的标签类型为context.slots.default()，log出来是个对象，然后我们拿这个结果和子组件Tab一一对比，不是Tab类型的就报错</p>
+<p>问题2：切换标签页</p>
+<p>我们这里使用selected用title，虽然在两个tabtitle一样的时候有漏洞，但是比较方便</p>
+<p>这里使用v-model绑定一个selected</p>
+<p>tabs中通过defaults中的props.title可以拿到titles数组</p>
+<p>当父组件传来的selected和我们的标签名相等的时候，我们就改变css的样式</p>
+<p>select实现 将标签名传给父组件，父组件会将selected的值变为这个标签名，然后回传给子组件</p>
+<p>子组件中通过父组件传来的selected改变标签内容</p>
+<p>问题3:如何获取每一个导航的宽度?</p>
+<p>内部用途 <code>v-for</code></p>
+<p>v-for 与 ref结合使用获取被遍历的每一个元素</p>
+<p>其实divs就是由被遍历的元素组成的数组,使用flter获取以及被选中的导航,获取其宽度。</p>
+<p>问题四:indirctor动画实现</p>
+<p>点击那个导航,那个导航下面就会出现一个蓝色的与其宽度相同的蓝色条条</p>
+<p>其宽度等于上面以及获取的被选中的导航的宽度</p>
+<p><code>x.getBoundingClientRect()</code></p>
+<p>用于获取x盒子的位置大小相关信息</p>
+<p>所有indirctor的位置带啊吗如下</p>
+<p>container为导航栏</p>
+<p>result为被选中的盒子</p>
+<h2 id="装修自己的官网"><a href="#装修自己的官网" class="headerlink" title="装修自己的官网"></a>装修自己的官网</h2><p>对于程序员来说，想把界面设计好看很难，这里推荐从一些设计网站获取素材，比如dribble</p>
+<p>使用<a href="https://link.zhihu.com/?target=https://cssgradient.io/">cssgradient.io/</a> 这个网址制作渐变色背景</p>
+<p>使用iconfont进行图片的引入</p>
+<p>使用clip-path(裁剪半径)画圆弧</p>
+<p>然后就实现了这样的一个首页</p>
+<h2 id="装修自己的文档页"><a href="#装修自己的文档页" class="headerlink" title="装修自己的文档页"></a>装修自己的文档页</h2><p>我们的文档页要使用markdown的形式来展示，我们用github-markdown-css进行渲染</p>
+<p>然后我们在页面中给articel标签都加上class=”markdown-body”就可以了</p>
+<p>实现markdonw之后的效果</p>
+<p>但是我们不想要页面结构如此之丑，能否用markdown格式的语法呢</p>
+<h2 id="自制vite插件"><a href="#自制vite插件" class="headerlink" title="自制vite插件"></a>自制vite插件</h2><p>注意marked插件让页面可以解析markdown，我们需要在容器出加markdown-body类</p>
+<p>安装marked 1.1.1</p>
+<p>新建vite.config.ts，代码如下</p>
+<p>新建plugins目录与md.ts</p>
+<p>新建三个文档页面的markdown文件</p>
+<p>例如，开始页面</p>
+<p>这样mark插件就做好了</p>
+<p>我们只需要在需要mark的地方加上markdown-body类，然后通过异步加载的形式，将md文件的内容转化为html就好了</p>
+<h2 id="如何实现代码高亮"><a href="#如何实现代码高亮" class="headerlink" title="如何实现代码高亮"></a><strong>如何实现代码高亮</strong></h2><p>安装插件prismjs</p>
+<p>由于这是一个老的插件，所以需要这样使用</p>
+<p>然后在代码的部分</p>
+<p>这里的html通过计算获得</p>
+<h2 id="如何展示源代码"><a href="#如何展示源代码" class="headerlink" title="如何展示源代码"></a><strong>如何展示源代码</strong></h2><p>我们将需要展示的代码抽离到别的组件中</p>
+<p>如何获取组件中的代码呢，使用custom blocks</p>
+<p>1.在展示代码组件中写一个demo标签，标签里面写标题</p>
+<p>2，我们来到vite.config.js里面加一段配置</p>
+<p>3.在组件的__sourceCode处拿到源代码</p>
+<h2 id="代码构建与发布"><a href="#代码构建与发布" class="headerlink" title="代码构建与发布"></a>代码构建与发布</h2><h2 id="1-将官网发布到github，并实现预览"><a href="#1-将官网发布到github，并实现预览" class="headerlink" title="1.将官网发布到github，并实现预览"></a>1.将官网发布到github，并实现预览</h2><p>发布官网，就是把dist目录传到网上，yarn build时要注意设置build path</p>
+<p>1.如果有dist目录，删除</p>
+<p>2.运行yarn build创建出最新的dist</p>
+<p>3.运行hs dist在本地测试</p>
+<p>4.部署到github</p>
+<p><strong>问题1：</strong>我们使用github提供的预览功能时，发现加载不到css和js文件，这是因为路径有问题，我们需要配置一下yarn build</p>
+<p>在vite.config.ts中加上</p>
+<p><strong>问题2：</strong>我们每次打包上传都需要输入很多命令，所以我们配置一个自动化脚本–文件名deploy.sh</p>
+<p>以后我们可以一键上传了，在终端运行</p>
+<p>若有收获，就点个赞吧</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/03/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAaxios/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "7ssRPgdL7nR67RaEfj8KwNwN-gzGzoHsz",
+          app_key: "16yi4dam4pxpavUJN3ezR0TM",
+          placeholder: "留下你的骚话",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,611 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="前端,计算机,程序员">
+  <meta name="author" content="PengYiDuo">
+  <meta name="keywords" content="前端,计算机,程序员">
+  <title>Peng的个人博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"pen-duo.github.io","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>pen-duo's space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://static.zkqiang.cn/images/20190728030406.jpeg-slim') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      PengYiDuo
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-03 11:24" pubdate>
+        2021年3月3日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      16
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <h1 id="浅析URL"><a href="#浅析URL" class="headerlink" title="浅析URL"></a>浅析URL</h1><h1 id="1-网络和IP"><a href="#1-网络和IP" class="headerlink" title="1.网络和IP"></a>1.网络和IP</h1><p>什么是IP？</p>
+<p>IP（Internt protocal）网际协议</p>
+<p>主要约定了两件事</p>
+<ul>
+<li>  如何定位一台设备</li>
+<li>  如何封装数据报文,以跟其他设备交流</li>
+</ul>
+<p>一个设备至少有一个独特的IP.</p>
+<h2 id="IP分为内网和外网"><a href="#IP分为内网和外网" class="headerlink" title="IP分为内网和外网"></a>IP分为内网和外网</h2><p>外网我们需要通过路由器获取,只要路由器连接上了运营商的服务器,那么路由器就会拥有一个外网IP,比如[14.17.32.211] 就是一个外网IP。这就是我们在互联网上的位置。</p>
+<p>值得一提的是,当我们重启路由器时,我们的路由器可能会被重新分配外网IP,也就是说,我们的路由器没有固定的外网IP。</p>
+<p>内网,此时我们的设备连接上路由器,我们的手机和电脑上的IP就是内网IP。</p>
+<p>路由器会在我们家里创建一个内网,内网中的设备使用内网IP,一般来说这个IP的格式都是192.168.xxx.xxx。</p>
+<p>然后路由会给每一个外网中的设备分配一个不同的内网。</p>
+<p><strong>路由器的功能</strong></p>
+<ul>
+<li>  现在路由器有两个IP,一个外网IP和一个内网IP</li>
+<li>  内网中的设备可以互相访问,但是不能直接访问外网。</li>
+<li>  内网中的设备想要访问外网,就必须经过路由器中转</li>
+<li>  外网中的设备可以互相访问,但是无法访问我们的内网。</li>
+<li>  外网设备想要把内容送到内网,也必须通过路由器。</li>
+<li>  也就是说内网和外网就像两个隔绝的空间,无法互通,唯一的联通点就是路由器。</li>
+<li>  所以路由器有时候也被叫做网关。</li>
+</ul>
+<h2 id="几个特殊的IP"><a href="#几个特殊的IP" class="headerlink" title="几个特殊的IP"></a>几个特殊的IP</h2><p>分别是</p>
+<p>127.0.0.1表示自己</p>
+<p>localhost通过hosts指定自己</p>
+<p>0.0.0.0不表示任何设备</p>
+<h1 id="2-端口-port"><a href="#2-端口-port" class="headerlink" title="2.端口(port)"></a>2.端口(port)</h1><h2 id="端口的用途"><a href="#端口的用途" class="headerlink" title="端口的用途"></a>端口的用途</h2><p>端口用来指定某台服务器上的某个服务</p>
+<p>IP是用来指定访问那一台设备的,此时我们还需要指定访问这台设备上的特定服务。</p>
+<p>一台机器可以提供很多不同的服务。</p>
+<p>每个服务一个号码,这个号码就叫做端口。</p>
+<hr>
+<h2 id="一台机器可以提供不同服务"><a href="#一台机器可以提供不同服务" class="headerlink" title="一台机器可以提供不同服务"></a>一台机器可以提供不同服务</h2><ul>
+<li>  要提供HTTP服务最好使用80端口</li>
+<li>  要提供HTTPS服务最好使用443端口</li>
+<li>  要提供FTP服务最好使用21端口</li>
+<li>  一共有65535个端口</li>
+</ul>
+<h2 id="端口使用时的一些规则"><a href="#端口使用时的一些规则" class="headerlink" title="端口使用时的一些规则"></a>端口使用时的一些规则</h2><p>规则</p>
+<ul>
+<li>  0-1023号端口是留给系统使用的</li>
+<li>  你只有拥有了管理员权限后,才能使用这1024个端口</li>
+<li>  其他端口可以给普通用户使用</li>
+<li>  比如http-server默认使用8080端口</li>
+<li>  一个端口如果被占用,你就只能换一个端口</li>
+</ul>
+<h1 id="3-域名"><a href="#3-域名" class="headerlink" title="3.域名"></a>3.域名</h1><p>因为数字型的IP实在不符合人类的记忆习惯,于是有人想出了用字符串代替一大串的数字,也就引出了<strong>域名。</strong></p>
+<p><strong>域名就是对IP的别称。</strong></p>
+<p>比如baidu.com对应的IP地址是</p>
+<p>220.181.38.148</p>
+<p>39.156.69.79。</p>
+<h2 id="均衡负载和共享主机"><a href="#均衡负载和共享主机" class="headerlink" title="均衡负载和共享主机"></a>均衡负载和共享主机</h2><p>知识点:</p>
+<p>一个域名可以对用不同的IP。</p>
+<p>这个叫均衡负载,防止一台机器扛不住。</p>
+<p>一个IP可以对应不同域名。</p>
+<p>这个叫共享主机。  </p>
+<h1 id="4-DNS协议"><a href="#4-DNS协议" class="headerlink" title="4.DNS协议"></a>4.DNS协议</h1><p>DNS协议的主要作用就是使域名和IP对应起来.</p>
+<p>当你使用Chrome访问baidu.com</p>
+<p>具体过程:</p>
+<p>你的Chrome浏览器会向电信/联通提供的DNS服务器询问baidu.com对应什么IP</p>
+<p>电信/联通会回答一个IP</p>
+<p>然后Chrome才会向对应IP的80/443端口发送请求</p>
+<p>请求内容是查看baidu.com的首页。</p>
+<p>为什么是80/443端口</p>
+<p>服务器默认用80提供http服务</p>
+<p>服务器默认用443提供https服务</p>
+<p>你可以在开发者工具里看到具体的端口</p>
+<h1 id="5-路径-path"><a href="#5-路径-path" class="headerlink" title="5.路径(path)"></a>5.路径(path)</h1><p>我们此时可以访问指定的服务器中的指定服务,但是我们该如何访问指定服务的不同界面呢?</p>
+<p>路径可以做到这一点。</p>
+<h1 id="6-查询参数"><a href="#6-查询参数" class="headerlink" title="6.查询参数"></a>6.查询参数</h1><p>可以访问同一个页面的不同内容。</p>
+<h1 id="7-锚点"><a href="#7-锚点" class="headerlink" title="7.锚点"></a>7.锚点</h1><p>可以访问同一个内容的不同位置。</p>
+<p>注意:锚点看起来支持中文,实际上不支持。</p>
+<p>锚点无法再Network面板上查看。</p>
+<p>因为锚点不会被传给服务器。</p>
+<h1 id="8-URL"><a href="#8-URL" class="headerlink" title="8.URL"></a>8.URL</h1><p>URL实际上就等于 协议 + 域名或IP + 端口名 + 路径 + 查询字符串 + 锚点。</p>
+<p> <img src="https://cdn.nlark.com/yuque/0/2020/png/1554318/1606898790489-447d3907-8a52-462d-a50f-4658decca993.png" srcset="/img/loading.gif" alt="Snipaste_2020-12-02_16-46-21.png" title="Snipaste_2020-12-02_16-46-21.png"> </p>
+<p>wd-hello&amp;rsv_spt-15</p>
+<p>com/s</p>
+<p><a target="_blank" rel="noopener" href="https://www.baidu.co/">https://www.baidu.co</a></p>
+<p>查问冬仅锅点</p>
+<p>路经</p>
+<p>域名</p>
+<p>协以</p>
+<p>HTTP/HTTPS端口是默认的80/443</p>
+<h1 id="9-一些比较有用的有关于HTTP的命令"><a href="#9-一些比较有用的有关于HTTP的命令" class="headerlink" title="9.一些比较有用的有关于HTTP的命令"></a>9.一些比较有用的有关于HTTP的命令</h1><p>1.nslookup</p>
+<p>nslookup最简单的用法是查询域名对应的IP地址</p>
+<p>nslookup baidu.com</p>
+<p> <img src="https://cdn.nlark.com/yuque/0/2020/png/1554318/1606900696744-f0412b53-5453-459c-a0c0-be13d9ab95f5.png" srcset="/img/loading.gif" alt="Snipaste_2020-12-02_17-17-57.png" title="Snipaste_2020-12-02_17-17-57.png"> </p>
+<p>服务器:ns.jxncptt,net.cn</p>
+<p>ddress:202.101.224.69</p>
+<p>非权威应答:</p>
+<p>名称:</p>
+<p>baidu.</p>
+<p>com</p>
+<p>220.181.38.148</p>
+<p>ddresses:</p>
+<p>39.156.69.79</p>
+<p>2.ping</p>
+<p>ping命令 用于验证与远程计算机的连接。</p>
+<p>ping baidu.com</p>
+<p> <img src="https://cdn.nlark.com/yuque/0/2020/png/1554318/1606900796788-7d7264e2-cdb1-4360-95bd-96c2913ba2ad.png" srcset="/img/loading.gif" alt="Snipaste_2020-12-02_17-19-34.png" title="Snipaste_2020-12-02_17-19-34.png"> </p>
+<p>具有32字节的数据:</p>
+<p>正在Ping</p>
+<p>[39.156.69.79]</p>
+<p>baidu.com</p>
+<p>来自</p>
+<p>2时间-33msTTL-47</p>
+<p>的回复:字节-32日</p>
+<p>39.156.69.79</p>
+<p>来自</p>
+<p>的回复:字节-32时间-34msTTL-47</p>
+<p>39.156.69.79</p>
+<p>来自</p>
+<p>的回复:字节-32时间-36msTTL-47</p>
+<p>39.156,69.79</p>
+<p>来自</p>
+<p>的回复:字节-32时间-35msTTL-47</p>
+<p>39.156.69.79</p>
+<p>统计信息:</p>
+<p>的Ping</p>
+<p>39.156.69.79</p>
+<p>4,丢失二1(0%丢失),</p>
+<p>4,已接收</p>
+<p>数据包:已发送</p>
+<p>住返行程的估计时间(以毫秒为单位)</p>
+<p>最长</p>
+<p>36ms,平均-34ms</p>
+<p>最短-33mS,</p>
+<p>3.curl</p>
+<p>最简单的作用就是查看在于远程计算机连接的过程。</p>
+<p>4.ipconfig查询本地内外网IP。</p>
+<p>若有收获，就点个赞吧</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/03/%E6%B5%85%E6%9E%90HTTP/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/03/CSS%E5%8A%A8%E7%94%BB/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "7ssRPgdL7nR67RaEfj8KwNwN-gzGzoHsz",
+          app_key: "16yi4dam4pxpavUJN3ezR0TM",
+          placeholder: "留下你的骚话",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>

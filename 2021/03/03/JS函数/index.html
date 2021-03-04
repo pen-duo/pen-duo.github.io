@@ -1,0 +1,619 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="前端,计算机,程序员">
+  <meta name="author" content="PengYiDuo">
+  <meta name="keywords" content="前端,计算机,程序员">
+  <title>Peng的个人博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"pen-duo.github.io","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>pen-duo's space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('https://static.zkqiang.cn/images/20190728030406.jpeg-slim') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      PengYiDuo
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-03 18:21" pubdate>
+        2021年3月3日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      23
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body">
+              <h1 id="JS函数"><a href="#JS函数" class="headerlink" title="JS函数"></a>JS函数</h1><h1 id="函数的四种定义方式"><a href="#函数的四种定义方式" class="headerlink" title="函数的四种定义方式"></a>函数的四种定义方式</h1><h2 id="1-具名函数"><a href="#1-具名函数" class="headerlink" title="1.具名函数"></a>1.具名函数</h2><p>function 函数名(形参1,形参2){</p>
+<p>语句</p>
+<p>return 返回值</p>
+<p>}</p>
+<h2 id="2-匿名函数"><a href="#2-匿名函数" class="headerlink" title="2.匿名函数"></a>2.匿名函数</h2><p>上面的具名函数,去掉函数名就是匿名函数</p>
+<p>let a = function(x,y){return x + y}</p>
+<p>也叫函数表达式</p>
+<h2 id="3-箭头函数"><a href="#3-箭头函数" class="headerlink" title="3.箭头函数"></a>3.箭头函数</h2><p>let f1 = x =&gt; x * x;</p>
+<p>let f2 = (x,y)=&gt;{return x + y}圆括号不能省</p>
+<p>let f3 = (x,y) =&gt; {z = x + y; return z}花括号不能省</p>
+<p>let f4  = (x,y) =&gt; ({name：x,age：y})</p>
+<p>直接返回对象会报错,需要加个圆括号</p>
+<h2 id="4-用构造函数"><a href="#4-用构造函数" class="headerlink" title="4.用构造函数"></a>4.用构造函数</h2><p>let f = new Function(“x”,”y”,”return x + y”);</p>
+<p>基本没人使用。</p>
+<p>所有函数都是Function构造出来的。</p>
+<p>包括Object,Array,Function也是。</p>
+<h1 id="函数的元素"><a href="#函数的元素" class="headerlink" title="函数的元素"></a>函数的元素</h1><p>每个函数都有这些东西</p>
+<ul>
+<li>  调用时机</li>
+<li>  作用域</li>
+<li>  闭包</li>
+<li>  形式参数</li>
+<li>  返回值</li>
+<li>  调用栈</li>
+<li>  函数提升</li>
+<li>  arguments(除了箭头函数)</li>
+<li>  this(除了箭头函数)</li>
+</ul>
+<h2 id="调用时机"><a href="#调用时机" class="headerlink" title="调用时机"></a>调用时机</h2><p>let i; for(i = 0; i &lt; 6; i++){ setTimeout(()=&gt;{ console.log(i) },0) }</p>
+<p>打印6个6</p>
+<ul>
+<li>  为什么打印出的是6?</li>
+</ul>
+<p>因为setTimeout是异步任务,必须等待同步任务执行完以后才能执行。for循环结束后,i的值为6,所以最后打印出来的是6。</p>
+<ul>
+<li>  为什么打印出来6个?</li>
+</ul>
+<p>每次执行for循环,setTimeout会被推入任务队列,总共被推入了六次,但是里面的函数不会被执行,等待for循环一结束,任务队列中的setTimeout里面的函数全部执行,所以会答应出6个6.</p>
+<p>打印0,1,2,3,4,5</p>
+<ul>
+<li>  为什么打印出来的i不一样?</li>
+</ul>
+<p>因为for循环头部的let不仅将i绑定到for循环块中，事实上它将其重新绑定到循环体的每一次迭代中，确保上一次迭代结束的值重新被赋值,实际上这里有6个不同的i。</p>
+<ul>
+<li>  利用闭包打印出0,1,2,3,4,5</li>
+</ul>
+<p>for(var i = 0; i &lt; 6; i++){</p>
+<p>(function(){</p>
+<p>console.log(i)</p>
+<p>})()</p>
+<p>}</p>
+<h2 id="作用域与作用域链"><a href="#作用域与作用域链" class="headerlink" title="作用域与作用域链"></a>作用域与作用域链</h2><p>JS作用域：就是代码名字(变量）在某个范围内起作用和效果。目的：提高程序的可靠性和减少命名冲突。</p>
+<ul>
+<li><p>  js的作用域（es6）之前：全局作用域,局部作用域。</p>
+</li>
+<li><p>  全局作用域：整个script的标签或则是一个单独的js文件</p>
+</li>
+<li><p>  局部(函数作用域：在函数内部就是局部作用域，这个代码的名字只在函数内部起作用。</p>
+</li>
+</ul>
+<p>作用域链<br>内部函数访问外部函数的变量，采取的是遵从就近原则的链式查找到的方式来决定取那个值，这种结构我们称为作用域链。</p>
+<h2 id="全局变量和局部变量"><a href="#全局变量和局部变量" class="headerlink" title="全局变量和局部变量"></a>全局变量和局部变量</h2><ul>
+<li><p>  变量作用域的分类：根据 作用域的不同，我们变量分为全局变量和局部变量。</p>
+</li>
+<li><p>  全局变量：在全局作用域下的变量。可以全局使用。注意：如果在函数内部 没有声明直接赋值的变量也属于全局变量。</p>
+</li>
+<li><p>  局部变量： 在函数作用域下的变量。只能在函数内部使用。注意：函数的形参也可以当局部变量。</p>
+</li>
+<li><p>  在函数内没有声明但是赋值的变量属于全局变量。</p>
+</li>
+<li><p>  函数的形参属于局部变量。</p>
+</li>
+</ul>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>如果一个函数用到了外面的变量,那么这个函数加这个变量就叫做闭包。</p>
+<p>闭包的主要作用<strong>：**</strong>隐藏局部变量，暴露操作函数**</p>
+<p>1.延伸了变量的作用范围。(使得无论是函数内部的作用域还是函数外部的作用域都可以访问这个函数的局部变量)。</p>
+<p>因为ES5中的if和for没有块级作用域,所以很多时候我们必须利用function的作用域来解实现变量的私有化。</p>
+<p>ES6中的let解决了这个问题。</p>
+<p>2.闭包的第二个用途是使我们在函数外部能够访问到函数内部的变量。 通过使用闭包，我们可以通过在外部调用闭包函数，从而在外部访问到函数内部的变量，可以使用这种方法来创建私有变量。</p>
+<p>3.函数的另一个用途是使已经运行结束的函数上下文中的变量对象继续留在内存中，因为闭包函数保留了这个变量对象的引用，所以这个变量对象不会被回收。</p>
+<p>闭包的缺点：</p>
+<p>1.由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。</p>
+<p>2.闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</p>
+<h2 id="形式参数"><a href="#形式参数" class="headerlink" title="形式参数"></a>形式参数</h2><p>就是非实际参数</p>
+<p>其中x和y就是实际形参,因为并不是实际参数。</p>
+<p>调用add时,1和2就是实际参数,会被赋值给x y。</p>
+<p>形式参数可认为是变量声明</p>
+<p>形式参数可多可少。</p>
+<h2 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h2><ul>
+<li>函数是处理事情的工具，需要将结果返回给函数的调用者。<br>  在我们实际开发里面，我们经常用一个变量来接受 函数的返回结果。</li>
+<li>终止函数的功能：return 后面的代码不会被执行。<br>  return只能返回一个值，如果用逗号分开多个值，以最后一个为准。 如果想返回多个值可以利用数组。<br>  函数有retuen返回return后面的值，如果没有返回undefined。</li>
+</ul>
+<h2 id="调用栈"><a href="#调用栈" class="headerlink" title="调用栈"></a>调用栈</h2><h2 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h2><h2 id="爆栈"><a href="#爆栈" class="headerlink" title="爆栈"></a>爆栈</h2><h2 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h2><ol>
+<li>JS解析器在运行JS代码是分两步：预解析和代码执行。</li>
+</ol>
+<p>   * 预解析 JS引擎会把JS里面所有的var和function提升到当前作用域的最前面。</p>
+<p>   * 代码执行 按照代码书写的顺序从上往下执行</p>
+<p>2.  预解析分为变量预解析（变量提升）和函数预解析（函数提升）</p>
+<p>    * 变量提升 就是把所有的变量声明提升到当前作用域的最前面 不提升赋值操作。</p>
+<p>    * 函数提升 就是把所有的函数声明提升到当前作用域的最前面 不调用函数。</p>
+<h2 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h2><ul>
+<li>  当我们不确定有多少个参数传递的时候，可以用arguments来获取。在JS中，arguments实际上它是当前函数的一个内置对象。所有函数都内置了一个arguments对象。arguments对象中存储了传递的所有实参。</li>
+<li>  arguments展示形式是一个伪数组。因此可以进行遍历。</li>
+<li>  伪数组的特点：1.具有length属性。2.按索引方式存储数据。3.不具有数组的push,pop等方法。</li>
+<li>  只有函数才有argunments,每个函数都内置了arguments.</li>
+</ul>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><p>如何传this</p>
+<p>目前可以用fn.call(xxx,1,2,3)传this和arguments</p>
+<p>而且xxx会被自动转化为对象。</p>
+<p>如果我们相对一个还不知道名字的对象进行调用。</p>
+<p>一：我们可以通过变量名做到。</p>
+<p>对象</p>
+<p>类</p>
+<p>这种方式并不合理,尤其在类中。还没创建person对象就对其引用。</p>
+<p>此时</p>
+<p>我们想让函数获取对象的引用</p>
+<p>但是并不像通过变量名做到</p>
+<p>JS通过额外的this做到</p>
+<p>person.sayHi()会把person自动传给sayHi,sayHi可以通过this引用person.</p>
+<h3 id="this的两种调用"><a href="#this的两种调用" class="headerlink" title="this的两种调用"></a>this的两种调用</h3><p>小白调用法</p>
+<p>person.sayHi()</p>
+<p>会自动把person传到函数里,作为this</p>
+<p>大师调用法(推荐使用)</p>
+<p>person.sayHi.call(person)</p>
+<p>需要自己手动把person传到函数里,作为this</p>
+<h3 id="绑定this"><a href="#绑定this" class="headerlink" title="绑定this"></a>绑定this</h3><p>使用.bind可以让this不被改变</p>
+<p>function f1(p1,p2){</p>
+<p>console.log(this,p1,p2)</p>
+<p>}</p>
+<p>let f2 = f1.bind({name： ‘frank’})//那么f2就是f1绑定this之后的新函数</p>
+<p>bind还可以绑定其他参数</p>
+<p>let f3 = f1.bind({name： “frank”},”h1”)</p>
+<p>f3()等价于f1.call({name： “frank”},hi)</p>
+<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><p>箭头函数里面的this就是外面一层的this</p>
+<p>就是用call也没用。</p>
+<h2 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h2><p>(function(){}) ( ),</p>
+<p>(function(){} ()).</p>
+<p>立即执行函数不需要特意去调用,因为它自己会调用自己。</p>
+<p>立即执行函数最大的作用是独立的创建了一个作用域。</p>
+<p>若有收获，就点个赞吧</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/03/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/03/JS%E6%95%B0%E7%BB%84/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('vcomments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "7ssRPgdL7nR67RaEfj8KwNwN-gzGzoHsz",
+          app_key: "16yi4dam4pxpavUJN3ezR0TM",
+          placeholder: "留下你的骚话",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments powered by Valine.</a>
+  </noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
